@@ -14,7 +14,7 @@
         
         <!-- Styles -->
         <style>
-            html, body {
+            /*html, body {
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
@@ -63,7 +63,7 @@
 
             .m-b-md {
                 margin-bottom: 30px;
-            }
+            }*/
 
             body {
                 padding-top: 70px;
