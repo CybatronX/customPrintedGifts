@@ -1,5 +1,7 @@
+Write-Host "---------------------- Pushing changes to repository--------------------------" 
 git add *
 git commit -m "this is another deployment by ajay!"
-git pull origin master
+git push origin master
 git status
+Write-Host "---------------------- Getting changes in server --------------------------"
 Invoke-WebRequest 'http://devcrazygiftsclub.com/deploy.php' | Select-Object -Expand Content
