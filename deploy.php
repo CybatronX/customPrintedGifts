@@ -24,7 +24,7 @@
 		// Run it
 		$tmp = shell_exec($command);
 		// Output
-		$output .= "{$command}";
+		$output .= "{$command}\n";
 		$output .= htmlentities(trim($tmp)) . "\n";
 	}
 
