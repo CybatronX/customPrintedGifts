@@ -15,4 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test1', function () {
+    echo "test1";
+});
+
+
 Route::post('upload', 'UploadController@upload');
