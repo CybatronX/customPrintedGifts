@@ -166,8 +166,8 @@
         <script src="../node_modules/bootstrap-imageupload/dist/js/bootstrap-imageupload.js"></script>
 
         <script>
-            var $imageupload = $('.imageupload');
-            $imageupload.imageupload();
+            // var $imageupload = $('.imageupload');
+            // $imageupload.imageupload();
 
             // $('#imageupload-disable').on('click', function() {
             //     $imageupload.imageupload('disable');
