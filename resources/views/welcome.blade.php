@@ -148,7 +148,7 @@
                             <input type="file" id="image-file" name="image-file">
                         </label>
                         <button type="button" class="btn btn-default">Remove</button>
-                        <button type="submit" class="btn btn-primary" name="submit"> Upload </button>
+                        <input type="submit" class="btn btn-primary" name="submit" value="Upload"> 
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
                     </div>
                 </div>
