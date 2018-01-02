@@ -147,10 +147,10 @@
             </div>
 
             <!-- bootstrap-imageupload method buttons. -->
-            <button type="button" id="imageupload-disable" class="btn btn-danger">Disable</button>
+<!--             <button type="button" id="imageupload-disable" class="btn btn-danger">Disable</button>
             <button type="button" id="imageupload-enable" class="btn btn-success">Enable</button>
             <button type="button" id="imageupload-reset" class="btn btn-primary">Reset</button>
-
+ -->
         </div>
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
