@@ -5,12 +5,12 @@ use \Input as Input;
 class UploadController extends Controller {
 
 	public function upload(){
-		echo 'Upload function called successfully!'
+		echo 'Upload function called successfully!';
 
-		if(Input::hasFile('file')){
+		if(Input::hasFile('image-file')){
 
 			echo 'Uploaded';
-			$file = Input::file('file');
+			$file = Input::file('image-file');
 			$file->move('uploads', $file->getClientOriginalName());
 			echo '';
 		}
