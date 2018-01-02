@@ -131,20 +131,28 @@
             <p>A Bootstrap/jQuery plugin to preview image uploads.</p>
 
             <!-- bootstrap-imageupload. -->
-            <div class="imageupload panel panel-default">
-                <div class="panel-heading clearfix">
-                    <h3 class="panel-title pull-left">Upload Image</h3>
 
+            
+            
+
+            <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data">
+                <div class="imageupload panel panel-default">
+                    <div class="panel-heading clearfix">
+                        <h3 class="panel-title pull-left">Upload Image</h3>
+
+                    </div>
+                    <div class="file-tab panel-body">
+                        <label class="btn btn-default btn-file">
+                            <span>Browse</span>
+                            <!-- The file is stored here. -->
+                            <input type="file" id="image-file" name="image-file">
+                        </label>
+                        <button type="button" class="btn btn-default">Remove</button>
+                        <input type="submit" class="btn btn-primary" value="Upload" name="submit">
+                        <input type="hidden" value="{{ csrf_token() }}" name="_token">
+                    </div>
                 </div>
-                <div class="file-tab panel-body">
-                    <label class="btn btn-default btn-file">
-                        <span>Browse</span>
-                        <!-- The file is stored here. -->
-                        <input type="file" name="image-file">
-                    </label>
-                    <button type="button" class="btn btn-default">Remove</button>
-                </div>
-            </div>
+            </form>
 
             <!-- bootstrap-imageupload method buttons. -->
 <!--             <button type="button" id="imageupload-disable" class="btn btn-danger">Disable</button>
