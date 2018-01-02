@@ -9,7 +9,6 @@
 
 	// The commands
 	$commands = array(
-		'cd ..'
 		'echo $PWD',
 		'whoami',
 		'git pull origin master',
