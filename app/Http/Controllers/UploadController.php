@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-use \Input as Input;
+use Input;
 
 class UploadController extends Controller {
 
