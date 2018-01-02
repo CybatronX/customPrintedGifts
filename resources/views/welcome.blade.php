@@ -125,7 +125,7 @@
                 </div>
             </div>
         </nav>
-
+        
         <div class="container">
 
             <p>A Bootstrap/jQuery plugin to preview image uploads.</p>
