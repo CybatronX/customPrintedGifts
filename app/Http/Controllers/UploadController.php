@@ -78,10 +78,14 @@ class UploadController extends Controller {
 			    ]
 			]);
 
+			$key = json_decode($response->getBody()->key)
+
 			echo 'Successfully sent to photfunia...\n';
 
 
 			echo($response->getBody());
+			echo("##############");
+			echo(" ImageKey:".$key)
 		}
 
 	}
