@@ -54,9 +54,7 @@ class UploadController extends Controller {
 
 			echo 'Successfully sent to photfunia...\n';
 
-			$imageKey = $responseJSON["response"]["key"]
-
-			echo(" ImageKey:".var_dump($responseJSON["response"]["key"]));
+			$imageKey = $responseJSON["response"]["key"];
 
 			$response = $client->request('POST', 'https://photofunia.com/categories/all_effects/pencil_drawing?server=1', [
 			    'multipart' => [
