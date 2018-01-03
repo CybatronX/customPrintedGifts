@@ -83,9 +83,9 @@ class UploadController extends Controller {
 			echo 'Successfully sent to photfunia...\n';
 
 
-			echo($response->getBody());
+			// echo($response->getBody());
 			echo("##############");
-			echo(" ImageKey:".var_dump($responseJSON["key"]));
+			echo(" ImageKey:".var_dump($responseJSON));
 		}
 
 	}
