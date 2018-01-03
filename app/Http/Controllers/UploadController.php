@@ -85,7 +85,7 @@ class UploadController extends Controller {
 
 			echo($response->getBody());
 			echo("##############");
-			echo(" ImageKey:".$key)
+			echo(" ImageKey:".$key);
 		}
 
 	}
