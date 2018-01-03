@@ -85,7 +85,7 @@ class UploadController extends Controller {
 
 			echo($response->getBody());
 			echo("##############");
-			echo(" ImageKey:".var_dump($responseJSON[0]));
+			echo(" ImageKey:".var_dump($responseJSON));
 		}
 
 	}
