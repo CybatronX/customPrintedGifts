@@ -2,7 +2,6 @@
 
 use Input;
 use GuzzleHttp\Client;
-use PHPHtmlParser\Dom;
 
 class UploadController extends Controller {
 
