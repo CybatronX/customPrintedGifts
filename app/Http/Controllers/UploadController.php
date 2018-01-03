@@ -32,34 +32,6 @@ class UploadController extends Controller {
 
 
 
-			// $response = $client->request('POST', 'https://photofunia.com/categories/all_effects/pencil_drawing?server=1', [
-			//     'multipart' => [
-			//         [
-			//             'name'     => 'current-category',
-			//             'contents' => 'all_effects'
-			//         ],
-			//         [
-			//             'name'     => 'image',
-			//             'contents' => 'FpOP8l20CYBd_SLz5kG4PQ'
-			//         ],
-			//         [
-			//             'name'     => 'image:crop',
-			//             'contents' => '0.0.1280.770'
-			//         ],
-			//         [
-			//             'name'     => 'color',
-			//             'contents' => 'gray'
-			//         ],
-			//         [
-			//             'name'     => 'paper',
-			//             'contents' => 'white'
-			//         ],
-			//         [
-			//             'name'     => 'fade_edges',
-			//             'contents' => 'on'
-			//         ],
-			//     ]
-			// ]);
 
 
 
@@ -82,10 +54,39 @@ class UploadController extends Controller {
 
 			echo 'Successfully sent to photfunia...\n';
 
+			$imageKey = $responseJSON["response"]["key"]
 
-			// echo($response->getBody());
-			echo("##############");
 			echo(" ImageKey:".var_dump($responseJSON["response"]["key"]));
+
+			$response = $client->request('POST', 'https://photofunia.com/categories/all_effects/pencil_drawing?server=1', [
+			    'multipart' => [
+			        [
+			            'name'     => 'current-category',
+			            'contents' => 'all_effects'
+			        ],
+			        [
+			            'name'     => 'image',
+			            'contents' => $imageKey
+			        ],
+			        [
+			            'name'     => 'color',
+			            'contents' => 'gray'
+			        ],
+			        [
+			            'name'     => 'paper',
+			            'contents' => 'white'
+			        ],
+			        [
+			            'name'     => 'fade_edges',
+			            'contents' => 'on'
+			        ],
+			    ]
+			]);
+
+			// print_r($response);
+			$dom = new IvoPetkov\HTML5DOMDocument();
+			$dom->loadHTML($response->getBody());
+			echo $dom->querySelector('a.button')->getAttribute('href');
 		}
 
 	}
