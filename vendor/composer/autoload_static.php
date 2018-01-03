@@ -80,6 +80,7 @@ class ComposerStaticInit8fce4c5203ce2547620fa13a7d3f8498
         ),
         'I' => 
         array (
+            'IvoPetkov\\' => 10,
             'Illuminate\\' => 11,
         ),
         'G' => 
@@ -233,6 +234,10 @@ class ComposerStaticInit8fce4c5203ce2547620fa13a7d3f8498
         'Laravel\\Tinker\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
+        ),
+        'IvoPetkov\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ivopetkov/html5-dom-document-php/src',
         ),
         'Illuminate\\' => 
         array (
@@ -1826,6 +1831,10 @@ class ComposerStaticInit8fce4c5203ce2547620fa13a7d3f8498
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'IvoPetkov\\HTML5DOMDocument' => __DIR__ . '/..' . '/ivopetkov/html5-dom-document-php/src/HTML5DOMDocument.php',
+        'IvoPetkov\\HTML5DOMDocument\\Internal\\QuerySelectors' => __DIR__ . '/..' . '/ivopetkov/html5-dom-document-php/src/HTML5DOMDocument/Internal/QuerySelectors.php',
+        'IvoPetkov\\HTML5DOMElement' => __DIR__ . '/..' . '/ivopetkov/html5-dom-document-php/src/HTML5DOMElement.php',
+        'IvoPetkov\\HTML5DOMNodeList' => __DIR__ . '/..' . '/ivopetkov/html5-dom-document-php/src/HTML5DOMNodeList.php',
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
