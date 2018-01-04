@@ -2,6 +2,10 @@
 
 use Input;
 use GuzzleHttp\Client;
+use  IvoPetkov\HTML5DOMDocument;
+use  IvoPetkov\HTML5DOMDocument\Internal\QuerySelectors;
+use  IvoPetkov\HTML5DOMElement;
+use  IvoPetkov\HTML5DOMNodeList;
 
 class UploadController extends Controller {
 
