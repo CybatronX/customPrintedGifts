@@ -85,7 +85,7 @@ class UploadController extends Controller {
 			]);
 
 			// print_r($response);
-			$dom = new IvoPetkov\HTML5DOMDocument();
+			$dom = new HTML5DOMDocument();
 			$dom->loadHTML($response->getBody());
 			echo $dom->querySelector('a.button')->getAttribute('href');
 		}
