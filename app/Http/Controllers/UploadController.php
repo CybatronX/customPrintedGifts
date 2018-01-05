@@ -88,7 +88,7 @@ class UploadController extends Controller {
 			$dom = new HTML5DOMDocument();
 			$dom->loadHTML($response->getBody());
 			$downloadURL = $dom->querySelector('a.button')->getAttribute('href');
-			$sketchImageURL = preg_split("\?", $downloadURL);
+			$sketchImageURL = explode('?', $downloadURL)[0];
 			print_r($sketchImageURL);
 		}
 
