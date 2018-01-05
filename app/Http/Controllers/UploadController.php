@@ -88,8 +88,10 @@ class UploadController extends Controller {
 			$dom = new HTML5DOMDocument();
 			$dom->loadHTML($response->getBody());
 			$downloadURL = $dom->querySelector('a.button')->getAttribute('href');
-			$sketchImageURL = explode('?', $downloadURL)[0];
+			$sketchURL = explode('?', $downloadURL)[0];
 			print_r($sketchImageURL);
+
+			return Redirect::route('showMenTshirt', array('sketchURL' => $sketchURL));
 		}
 
 	}
