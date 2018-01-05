@@ -19,8 +19,8 @@ Route::get('test1', function () {
     echo "test1";
 });
 
-// Route::get('showMenTshirt', function ($sketchURL) {
-//     return view('showMenTshirt', ['sketchURL' => $sketchURL]);
-// })->name('showMenTshirt');
+Route::get('showMenTshirt/{sketchURL}', function ($sketchURL) {
+    return view('showMenTshirt', ['sketchURL' => $sketchURL]);
+})->name('showMenTshirt');
 
 Route::post('upload', 'UploadController@upload');
