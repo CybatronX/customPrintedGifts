@@ -92,7 +92,7 @@ class UploadController extends Controller {
 			$sketchURL = explode('?', $downloadURL)[0];
 			echo $sketchURL;
 
-			return redirect()->route('showMenTshirt', ['sketchURL' => urlencode($sketchURL)]);
+			return redirect()->route('/showMenTshirt?sketchURL={urlencode($sketchURL)}]);
 		}
 
 	}

@@ -19,7 +19,8 @@ Route::get('test1', function () {
     echo "test1";
 });
 
-Route::get('showMenTshirt?sketchURL={sketchURL}', function ($sketchURL) {
+Route::get('showMenTshirt', function () {
+	$sketchURL = $request->sketchURL;
     return view('showMenTshirt', ['sketchURL' => $sketchURL]);
 })->name('showMenTshirt');
 
