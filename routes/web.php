@@ -19,5 +19,8 @@ Route::get('test1', function () {
     echo "test1";
 });
 
+Route::get('showMenTshirt', function () {
+    return view('showMenTshirt', ['sketchURL' => 'https://u1.photofunia.com/2/results/Y/P/YPZGxCTKCiNnzoR2xgEqMA_l.jpg']);
+});
 
 Route::post('upload', 'UploadController@upload');
