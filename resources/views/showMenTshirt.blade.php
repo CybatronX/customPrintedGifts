@@ -105,7 +105,7 @@
 
             <!-- bootstrap-imageupload. -->
 
-            <img src={{sketchURL}} class = "img-responsive"/>
+            <img src={{$sketchURL}} class = "img-responsive"/>
 
             <!-- bootstrap-imageupload method buttons. -->
 <!--             <button type="button" id="imageupload-disable" class="btn btn-danger">Disable</button>
