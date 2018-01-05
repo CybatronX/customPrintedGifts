@@ -6,6 +6,7 @@ use  IvoPetkov\HTML5DOMDocument;
 use  IvoPetkov\HTML5DOMDocument\Internal\QuerySelectors;
 use  IvoPetkov\HTML5DOMElement;
 use  IvoPetkov\HTML5DOMNodeList;
+use Illuminate\Support\Facades\Redirect;
 
 class UploadController extends Controller {
 
