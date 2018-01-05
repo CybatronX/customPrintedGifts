@@ -101,8 +101,6 @@
 
         <div class="container">
 
-            <p>A Bootstrap/jQuery plugin to preview image uploads.</p>
-
             <!-- bootstrap-imageupload. -->
 
             <img src={{$sketchURL}} class = "img-responsive"/>
