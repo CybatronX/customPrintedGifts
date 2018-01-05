@@ -91,7 +91,7 @@ class UploadController extends Controller {
 			$downloadURL = $dom->querySelector('a.button')->getAttribute('href');
 			$sketchURL = explode('?', $downloadURL)[0];
 
-			return Redirect::route('showMenTshirt', ['sketchURL' => $sketchURL]);
+			return redirect()->route('showMenTshirt', ['sketchURL' => $sketchURL]);
 		}
 
 	}
