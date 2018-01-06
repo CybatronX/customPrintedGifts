@@ -93,14 +93,14 @@ class UploadController extends Controller {
 			echo $sketchURL;
 			// return view('showMenTshirt', ['sketchURL' => $sketchURL]);
 
-			// return redirect()->route('showMenTshirt?sketchURL={urlencode($sketchURL)}');
-			return redirect()->route('showMenTshirt');
+			return redirect()->route('showMenTshirt?sketchURL={urlencode($sketchURL)}');
+			// return redirect()->route('showMenTshirt');
 		}
 
 	}
 
 	public function showProducts(){
-			echo 'hey there!';
-			// $request->query('sketchURL');
+			// echo 'hey there!';
+			echo $request->query('sketchURL');
 	}
 }
