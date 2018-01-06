@@ -103,6 +103,6 @@ class UploadController extends Controller {
 
 	public function showProducts(){
 			// echo 'hey there!';
-			echo $request->query('sketchURL');
+			echo request()->query('sketchURL');
 	}
 }
