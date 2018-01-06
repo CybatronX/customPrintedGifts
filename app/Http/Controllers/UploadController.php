@@ -94,7 +94,7 @@ class UploadController extends Controller {
 			// return view('showMenTshirt', ['sketchURL' => $sketchURL]);
 
 			// return redirect()->route('showMenTshirt?sketchURL={urlencode($sketchURL)}');
-			// return redirect()->route('showMenTshirt');
+			return redirect()->route('showMenTshirt');
 		}
 
 	}
