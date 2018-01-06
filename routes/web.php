@@ -22,4 +22,4 @@ Route::get('test1', function () {
 Route::post('upload', 'UploadController@upload');
 
 
-Route::get('showMenTshirt', 'UploadController@showProducts');
+Route::get('showMenTshirt', 'UploadController@showProducts')->name('showMenTshirt');
