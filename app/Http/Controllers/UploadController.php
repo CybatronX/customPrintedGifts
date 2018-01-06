@@ -91,9 +91,9 @@ class UploadController extends Controller {
 			$downloadURL = $dom->querySelector('a.button')->getAttribute('href');
 			$sketchURL = explode('?', $downloadURL)[0];
 			echo $sketchURL;
-			// return view('showMenTshirt', ['sketchURL' => $sketchURL]);
+			
 
-			$queryString = array('sketchURL' => 'testString');
+			$queryString = array('sketchURL' => $sketchURL);
 
 			return redirect()->route('showMenTshirt', $queryString);
 			// return redirect()->route('showMenTshirt');
@@ -103,6 +103,7 @@ class UploadController extends Controller {
 
 	public function showProducts(){
 			// echo 'hey there!';
-			echo request()->query('sketchURL');
+			$sketchURL = request()->query('sketchURL');
+			return view('showMenTshirt', ['sketchURL' => $sketchURL]);
 	}
 }
