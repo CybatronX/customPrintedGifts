@@ -96,9 +96,9 @@ class UploadController extends Controller {
 			return redirect()->route('/showMenTshirt?sketchURL={urlencode($sketchURL)}');
 		}
 
-		public function showProducts(){
-				echo $request->query('sketchURL');
-		}
+	}
 
+	public function showProducts(){
+			echo $request->query('sketchURL');
 	}
 }
