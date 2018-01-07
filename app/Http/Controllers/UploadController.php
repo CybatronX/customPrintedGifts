@@ -87,8 +87,19 @@ class UploadController extends Controller {
 			
 
 			$queryString 	= array('sketchURL' => $sketchURL);
-			$sketchFileName = trim(Uuid::uuid1()->toString()).'.jpg';
+			$randomString = trim(Uuid::uuid1()->toString());
+			$sketchFileName = $randomString.'.jpg';
+			$sketchedFilesBackgroundRemoved = $randomString.'.png';
+
 			copy($sketchURL, 'uploads/sketchedFiles/'.$sketchFileName);
+
+			$removeBackgroundCommand = 'convert "./uploads/sketchedFiles/'.$sketchFileName.'" -fill none -draw "color 1,1 floodfill" "./uploads/sketchedFilesBackgroundRemoved/'.$sketchedFilesBackgroundRemoved.'"';
+			$output = '';
+			// Run it
+			$tmp = shell_exec($command);
+			// Output
+			$output .= "{$command}\n";
+			$output .= htmlentities(trim($tmp)) . "\n";
 
 			return redirect()->route('showMenTshirt', $queryString);
 			// return redirect()->route('showMenTshirt');
