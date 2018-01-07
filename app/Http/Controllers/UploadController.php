@@ -84,6 +84,7 @@ class UploadController extends Controller {
 			
 
 			$queryString = array('sketchURL' => $sketchURL);
+			copy($sketchURL, 'uploads/sketchedFiles');
 
 			return redirect()->route('showMenTshirt', $queryString);
 			// return redirect()->route('showMenTshirt');
