@@ -17,7 +17,7 @@ class UploadController extends Controller {
 
 			echo 'Downloading file in server...\n';
 			$file = Input::file('image-file');
-			$file->move('uploads', $file->getClientOriginalName());
+			$file->move('uploads/originalFiles/', $file->getClientOriginalName());
 			echo 'File downloaded and successfully saved \n';
 
 			$jar = new \GuzzleHttp\Cookie\CookieJar;
@@ -34,22 +34,12 @@ class UploadController extends Controller {
 			]);
 			echo 'Guzzle and cookies initialized. Sending image to photo funia...\n';
 
-
-
-
-
-
-
-			// print_r($response);
-			// $dom = new IvoPetkov\HTML5DOMDocument();
-			// $dom->loadHTML($response->getBody());
-			// echo $dom->querySelector('a.button')->getAttribute('href');
-
 			$response = $client->request('POST', 'https://photofunia.com/images?server=1', [
 			    'multipart' => [
 			        [
 			            'name'     => 'image',
-			            'contents' => fopen('./uploads/'.$file->getClientOriginalName(),'r')
+			            // 'contents' => fopen('./uploads/'.$file->getClientOriginalName(),'r')
+			            'contents' => $file
 			        ],
 			    ]
 			]);
