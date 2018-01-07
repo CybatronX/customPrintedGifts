@@ -38,7 +38,7 @@ class UploadController extends Controller {
 			    'multipart' => [
 			        [
 			            'name'     => 'image',
-			            // 'contents' => fopen('./uploads/'.$file->getClientOriginalName(),'r')
+			            'contents' => fopen('./uploads/originalFiles/'.$file->getClientOriginalName(),'r')
 			            'contents' => $file
 			        ],
 			    ]
