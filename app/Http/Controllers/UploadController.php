@@ -2,11 +2,14 @@
 
 use Input;
 use GuzzleHttp\Client;
-use  IvoPetkov\HTML5DOMDocument;
-use  IvoPetkov\HTML5DOMDocument\Internal\QuerySelectors;
-use  IvoPetkov\HTML5DOMElement;
-use  IvoPetkov\HTML5DOMNodeList;
+use IvoPetkov\HTML5DOMDocument;
+use IvoPetkov\HTML5DOMDocument\Internal\QuerySelectors;
+use IvoPetkov\HTML5DOMElement;
+use IvoPetkov\HTML5DOMNodeList;
 use Illuminate\Support\Facades\Redirect;
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
+
 
 class UploadController extends Controller {
 
@@ -84,8 +87,8 @@ class UploadController extends Controller {
 			
 
 			$queryString 	= array('sketchURL' => $sketchURL);
-			$sketchFileName = trim(com_create_guid(), '{}')
-			copy($sketchURL, 'uploads/sketchedFiles/'.$sketchFileName.'.jpg');
+			$sketchFileName = trim(Uuid::uuid1()->toString()).'.jpg';
+			copy($sketchURL, 'uploads/sketchedFiles/'.$sketchFileName);
 
 			return redirect()->route('showMenTshirt', $queryString);
 			// return redirect()->route('showMenTshirt');
