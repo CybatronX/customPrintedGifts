@@ -39,7 +39,7 @@ class UploadController extends Controller {
 			        [
 			            'name'     => 'image',
 			            'contents' => fopen('./uploads/originalFiles/'.$file->getClientOriginalName(),'r')
-			            'contents' => $file
+			            // 'contents' => $file
 			        ],
 			    ]
 			]);
