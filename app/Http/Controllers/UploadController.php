@@ -98,7 +98,6 @@ class UploadController extends Controller {
 			// Run it
 			$commandOutput = shell_exec($removeBackgroundCommand);
 			// Output
-			$output .= "{$command}\n";
 			$output .= htmlentities(trim($commandOutput)) . "\n";
 
 			return redirect()->route('showMenTshirt', $queryString);
