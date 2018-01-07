@@ -96,10 +96,10 @@ class UploadController extends Controller {
 			$removeBackgroundCommand = 'convert "./uploads/sketchedFiles/'.$sketchFileName.'" -fill none -draw "color 1,1 floodfill" "./uploads/sketchedFilesBackgroundRemoved/'.$sketchedFilesBackgroundRemoved.'"';
 			$output = '';
 			// Run it
-			$tmp = shell_exec($command);
+			$commandOutput = shell_exec($removeBackgroundCommand);
 			// Output
 			$output .= "{$command}\n";
-			$output .= htmlentities(trim($tmp)) . "\n";
+			$output .= htmlentities(trim($commandOutput)) . "\n";
 
 			return redirect()->route('showMenTshirt', $queryString);
 			// return redirect()->route('showMenTshirt');
