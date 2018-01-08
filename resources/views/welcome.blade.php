@@ -45,6 +45,10 @@
               transition-duration: 40s;
             }
 
+            .progressBarContainer {
+                display:none;
+            }
+
         </style>
     </head>
     <body>
@@ -96,7 +100,7 @@
             </form>
         </div>
 
-        <div class="container progressBar">
+        <div class="container progressBarContainer">
             <h2>Test update...</h2>
          <!-- Skill Bars -->
             <div class="progress skill-bar">
