@@ -23,6 +23,28 @@
                 margin: 20px 0;
             }
 
+            .progress {
+              height: 35px;
+
+            }
+            .progress .skill {
+              font: normal 12px "Open Sans Web";
+              line-height: 35px;
+              padding: 0;
+              margin: 0 0 0 20px;   
+              text-transform: uppercase;
+            }
+            .progress .skill .val {
+              float: right;
+              font-style: normal;
+              margin: 0 20px 0 0;
+            }
+
+            .progress-bar {
+              text-align: left;
+              transition-duration: 40s;
+            }
+
         </style>
     </head>
     <body>
@@ -72,8 +94,19 @@
                     </div>
                 </div>
             </form>
-
         </div>
+
+        <div class="container progressBar">
+            <h2>Animated Bootstrap Progress Bars by <a href="http://gridgum.com/author/agez" target="_blank">agez</a></h2>
+         <!-- Skill Bars -->
+            <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
+                </div>
+            </div>
+        </div>  
+
+    </div>
+    </div>
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -99,6 +132,15 @@
             //     $imageupload.imageupload('reset');
             //     $(this).blur();
             // });
+
+             $(document).ready(function() {
+              $('.progress .progress-bar').css("width",
+                        function() {
+                            return $(this).attr("aria-valuenow") + "%";
+                        }
+                    )
+                });
+
         </script>
     </body>
 </html>
