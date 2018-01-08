@@ -38,182 +38,127 @@
                 </div>
             </div>
         </nav>
-
+        
         <div class="wrapper">
-            <div class="content">
-                <!-- content here -->
-                <div class="product-grid product-grid--flexbox">
-                    <div class="product-grid__wrapper">
-                        <!-- Product list start here -->
 
-                        <!-- Single product -->
-                        <div class="product-grid__product-wrapper">
-                            <div class="product-grid__product">
-                                <div class="product-grid__img-wrapper">         
-                                    <img src="http://i.imgur.com/y83H9n1.jpg" alt="Img" class="product-grid__img" />
-                                </div>
-                                <span class="product-grid__title">Product title</span>
-                                <span class="product-grid__price">1.399€</span>
-                                <div class="product-grid__extend-wrapper">
-                                    <div class="product-grid__extend">
-                                        <p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-                                        <span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>              
-                                        <span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end Single product -->
+      <div class="grid">
 
-                        <div class="product-grid__product-wrapper">
-                            <div class="product-grid__product">
-                                <div class="product-grid__img-wrapper">         
-                                    <img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-                                </div>
-                                <span class="product-grid__title">Product title</span>
-                                <span class="product-grid__price">1.399€</span>
-                                <div class="product-grid__extend-wrapper">
-                                    <div class="product-grid__extend">
-                                        <p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-                                        <span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>              
-                                        <span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-grid__product-wrapper">
-                            <div class="product-grid__product">
-                                <div class="product-grid__img-wrapper">         
-                                    <img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-                                </div>
-                                <span class="product-grid__title">Product title</span>
-                                <span class="product-grid__price">1.399€</span>
-                                <div class="product-grid__extend-wrapper">
-                                    <div class="product-grid__extend">
-                                        <p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-                                        <span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>              
-                                        <span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-grid__product-wrapper">
-                            <div class="product-grid__product">
-                                <div class="product-grid__img-wrapper">         
-                                    <img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-                                </div>
-                                <span class="product-grid__title">Product title</span>
-                                <span class="product-grid__price">1.399€</span>
-                                <div class="product-grid__extend-wrapper">
-                                    <div class="product-grid__extend">
-                                        <p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-                                        <span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>              
-                                        <span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-grid__product-wrapper">
-                            <div class="product-grid__product">
-                                <div class="product-grid__img-wrapper">         
-                                    <img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-                                </div>
-                                <span class="product-grid__title">Product title</span>
-                                <span class="product-grid__price">1.399€</span>
-                                <div class="product-grid__extend-wrapper">
-                                    <div class="product-grid__extend">
-                                        <p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-                                        <span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>              
-                                        <span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-grid__product-wrapper">
-                            <div class="product-grid__product">
-                                <div class="product-grid__img-wrapper">         
-                                    <img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-                                </div>
-                                <span class="product-grid__title">Product title</span>
-                                <span class="product-grid__price">1.399€</span>
-                                <div class="product-grid__extend-wrapper">
-                                    <div class="product-grid__extend">
-                                        <p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-                                        <span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>              
-                                        <span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-grid__product-wrapper">
-                            <div class="product-grid__product">
-                                <div class="product-grid__img-wrapper">         
-                                    <img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-                                </div>
-                                <span class="product-grid__title">Product title</span>
-                                <span class="product-grid__price">1.399€</span>
-                                <div class="product-grid__extend-wrapper">
-                                    <div class="product-grid__extend">
-                                        <p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-                                        <span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>              
-                                        <span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-grid__product-wrapper">
-                            <div class="product-grid__product">
-                                <div class="product-grid__img-wrapper">         
-                                    <img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-                                </div>
-                                <span class="product-grid__title">Product title</span>
-                                <span class="product-grid__price">1.399€</span>
-                                <div class="product-grid__extend-wrapper">
-                                    <div class="product-grid__extend">
-                                        <p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-                                        <span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>              
-                                        <span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-grid__product-wrapper">
-                            <div class="product-grid__product">
-                                <div class="product-grid__img-wrapper">         
-                                    <img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-                                </div>
-                                <span class="product-grid__title">Product title</span>
-                                <span class="product-grid__price">1.399€</span>
-                                <div class="product-grid__extend-wrapper">
-                                    <div class="product-grid__extend">
-                                        <p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-                                        <span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>              
-                                        <span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>      
-                </div>
+        <!-- Row One -->
+        <div class="col-one-third">
+          <div class="price rounded" style="float:right">
+            $19.99
+          </div>
+          <div class="product">
+            <div class ="productImage">
+               <img class="over" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+              <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/mensTshirt.jpg" alt="">
             </div>
-
-        </div>
-
-        <div class="container">
-
-            <div class="span4">
-                <img src="http://i.imgur.com/y83H9n1.jpg" class = "center-block"/>
-                <!-- <img src={{$sketchURL}} class = "center-block"/> -->
+            <div class= "productDetails">
+               <div class="row nav-row">
+                 Custom Men's T-shirt
+              </div>
+              <div class="row nav-row">
+                <button type="button" class="btn btn-success selectSizeButton">Choose Size</button>
+              </div>
             </div>
- 
+          </div>
+        </div>    
+        <div class="col-one-third">
+          <div class="price rounded" style="float:right">
+            $19.99
+          </div>
+          <div class="product">
+            <div class ="productImage">
+               <img class="over" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+              <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/womensTshirt.jpg" alt="">
+            </div>
+            <div class= "productDetails">
+               <div class="row nav-row">
+                 Custom Men's T-shirt
+              </div>
+              <div class="row nav-row">
+                <button type="button" class="btn btn-success selectSizeButton">Choose Size</button>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="col-one-third">
+          <div class="price rounded" style="float:right">
+            $19.99
+          </div>
+          <div class="product">
+            <div class ="productImage">
+               <img class="overHoodie" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+              <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/hoodies.jpg" alt="">
+            </div>
+            <div class= "productDetails">
+               <div class="row nav-row">
+                 Custom Men's T-shirt
+              </div>
+              <div class="row nav-row">
+                <button type="button" class="btn btn-success selectSizeButton">Choose Size</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-one-third">
+          <div class="price rounded" style="float:right">
+            $19.99
+          </div>
+          <div class="product">
+            <div class ="productImage">
+               <img class="over" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+              <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/sweatshirt.jpg" alt="">
+            </div>
+            <div class= "productDetails">
+               <div class="row nav-row">
+                 Custom Men's T-shirt
+              </div>
+              <div class="row nav-row">
+                <button type="button" class="btn btn-success selectSizeButton">Choose Size</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-one-third">
+          <div class="price rounded" style="float:right">
+            $19.99
+          </div>
+          <div class="product">
+            <div class ="productImage">
+               <img class="over" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+              <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/vneckTees.jpg" alt="">
+            </div>
+            <div class= "productDetails">
+               <div class="row nav-row">
+                 Custom Men's T-shirt
+              </div>
+              <div class="row nav-row">
+                <button type="button" class="btn btn-success selectSizeButton">Choose Size</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-one-third">
+          <div class="price rounded" style="float:right">
+            $19.99
+          </div>
+          <div class="product">
+            <div class ="productImage">
+               <img class="overMug" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+              <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/mugs.jpg" alt="">
+            </div>
+            <div class= "productDetails">
+               <div class="row nav-row">
+                 Custom Men's T-shirt
+              </div>
+              <div class="row nav-row">
+                <button type="button" class="btn btn-success selectSizeButton">Choose Size</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div><!-- /.wrapper -->
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
