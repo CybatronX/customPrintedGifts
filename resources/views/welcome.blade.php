@@ -97,7 +97,7 @@
         </div>
 
         <div class="container progressBar">
-            <h2>Converting your image into a beautiful nostalgic sketch...</h2>
+            <h2>Test update...</h2>
          <!-- Skill Bars -->
             <div class="progress skill-bar">
                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
