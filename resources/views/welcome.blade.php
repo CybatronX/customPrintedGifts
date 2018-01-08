@@ -14,56 +14,6 @@
         
         <!-- Styles -->
         <style>
-            /*html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }*/
 
             body {
                 padding-top: 70px;
@@ -76,32 +26,6 @@
         </style>
     </head>
     <body>
-<!--         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div> -->
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -128,12 +52,7 @@
 
         <div class="container">
 
-            <p>A Bootstrap/jQuery plugin to preview image uploads.</p>
-
-            <!-- bootstrap-imageupload. -->
-
-            
-            
+            <p>A Bootstrap/jQuery plugin to preview image uploads.</p>            
 
             <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data">
                 <div class="imageupload panel panel-default">
@@ -154,11 +73,6 @@
                 </div>
             </form>
 
-            <!-- bootstrap-imageupload method buttons. -->
-<!--             <button type="button" id="imageupload-disable" class="btn btn-danger">Disable</button>
-            <button type="button" id="imageupload-enable" class="btn btn-success">Enable</button>
-            <button type="button" id="imageupload-reset" class="btn btn-primary">Reset</button>
- -->
         </div>
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
@@ -167,7 +81,9 @@
 
         <script>
             var $imageupload = $('.imageupload');
-            $imageupload.imageupload();
+            $imageupload.imageupload({
+                maxFileSizeKb:4096
+            });
 
             // $('#imageupload-disable').on('click', function() {
             //     $imageupload.imageupload('disable');
