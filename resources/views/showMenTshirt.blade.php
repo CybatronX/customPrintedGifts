@@ -50,7 +50,7 @@
           </div>
           <div class="product">
             <div class ="productImage">
-               <img class="over" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+               <img class="over" src={{$sketchURL}} />
               <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/mensTshirt.jpg" alt="">
             </div>
             <div class= "productDetails">
@@ -69,7 +69,7 @@
           </div>
           <div class="product">
             <div class ="productImage">
-               <img class="over" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+               <img class="over" src={{$sketchURL}} />
               <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/womensTshirt.jpg" alt="">
             </div>
             <div class= "productDetails">
@@ -88,7 +88,7 @@
           </div>
           <div class="product">
             <div class ="productImage">
-               <img class="overHoodie" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+               <img class="overHoodie" src={{$sketchURL}} />
               <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/hoodies.jpg" alt="">
             </div>
             <div class= "productDetails">
@@ -107,7 +107,7 @@
           </div>
           <div class="product">
             <div class ="productImage">
-               <img class="over" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+               <img class="over" src={{$sketchURL}} />
               <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/sweatshirt.jpg" alt="">
             </div>
             <div class= "productDetails">
@@ -126,7 +126,7 @@
           </div>
           <div class="product">
             <div class ="productImage">
-               <img class="over" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+               <img class="over" src={{$sketchURL}} />
               <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/vneckTees.jpg" alt="">
             </div>
             <div class= "productDetails">
@@ -145,7 +145,7 @@
           </div>
           <div class="product">
             <div class ="productImage">
-               <img class="overMug" src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/output.png" />
+               <img class="overMug" src={{$sketchURL}} />
               <img src="https://s3-us-west-2.amazonaws.com/crazygiftstempphoto/customPrintableObjects/mugs.jpg" alt="">
             </div>
             <div class= "productDetails">
