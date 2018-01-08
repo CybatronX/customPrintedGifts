@@ -85,20 +85,19 @@ class UploadController extends Controller {
 			$sketchURL = explode('?', $downloadURL)[0];
 			echo $sketchURL;
 			
-
-			$queryString 	= array('sketchURL' => $sketchURL);
 			$randomString = trim(Uuid::uuid1()->toString());
 			$sketchFileName = $randomString.'.jpg';
 			$sketchedFilesBackgroundRemoved = $randomString.'.png';
 
 			copy($sketchURL, 'uploads/sketchedFiles/'.$sketchFileName);
 
+			//use ImageMagick to remove background
 			$removeBackgroundCommand = 'convert "./uploads/sketchedFiles/'.$sketchFileName.'" -fill none -draw "color 1,1 floodfill" "./uploads/sketchedFilesBackgroundRemoved/'.$sketchedFilesBackgroundRemoved.'"';
 			$output = '';
-			// Run it
 			$commandOutput = shell_exec($removeBackgroundCommand);
-			// Output
 			$output .= htmlentities(trim($commandOutput)) . "\n";
+
+			$queryString 	= array('sketchURL' => $url('/').'/uploads/sketchedFilesBackgroundRemoved/'.$sketchFileName);
 
 			return redirect()->route('showMenTshirt', $queryString);
 			// return redirect()->route('showMenTshirt');
