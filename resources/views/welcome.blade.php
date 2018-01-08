@@ -82,7 +82,7 @@
         <script>
             var $imageupload = $('.imageupload');
             $imageupload.imageupload({
-                maxFileSizeKb:4096
+                maxFileSizeKb:8192
             });
 
             // $('#imageupload-disable').on('click', function() {
