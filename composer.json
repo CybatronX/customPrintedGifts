@@ -11,7 +11,8 @@
         "ivopetkov/html5-dom-document-php": "^0.5.8",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "paquettg/php-html-parser": "^1.7"
+        "paquettg/php-html-parser": "^1.7",
+        "ramsey/uuid": "^3.7"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
