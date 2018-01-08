@@ -97,7 +97,7 @@ class UploadController extends Controller {
 			$commandOutput = shell_exec($removeBackgroundCommand);
 			$output .= htmlentities(trim($commandOutput)) . "\n";
 
-			$queryString 	= array('sketchURL' => $this->app['url']->to('/').'/uploads/sketchedFilesBackgroundRemoved/'.$sketchFileName);
+			$queryString 	= array('sketchURL' => url('/').'/uploads/sketchedFilesBackgroundRemoved/'.$sketchFileName);
 
 			return redirect()->route('showMenTshirt', $queryString);
 			// return redirect()->route('showMenTshirt');
