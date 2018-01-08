@@ -2,11 +2,14 @@
 
 use Input;
 use GuzzleHttp\Client;
-use  IvoPetkov\HTML5DOMDocument;
-use  IvoPetkov\HTML5DOMDocument\Internal\QuerySelectors;
-use  IvoPetkov\HTML5DOMElement;
-use  IvoPetkov\HTML5DOMNodeList;
+use IvoPetkov\HTML5DOMDocument;
+use IvoPetkov\HTML5DOMDocument\Internal\QuerySelectors;
+use IvoPetkov\HTML5DOMElement;
+use IvoPetkov\HTML5DOMNodeList;
 use Illuminate\Support\Facades\Redirect;
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
+
 
 class UploadController extends Controller {
 
@@ -17,7 +20,7 @@ class UploadController extends Controller {
 
 			echo 'Downloading file in server...\n';
 			$file = Input::file('image-file');
-			$file->move('uploads', $file->getClientOriginalName());
+			$file->move('uploads/originalFiles/', $file->getClientOriginalName());
 			echo 'File downloaded and successfully saved \n';
 
 			$jar = new \GuzzleHttp\Cookie\CookieJar;
@@ -34,22 +37,12 @@ class UploadController extends Controller {
 			]);
 			echo 'Guzzle and cookies initialized. Sending image to photo funia...\n';
 
-
-
-
-
-
-
-			// print_r($response);
-			// $dom = new IvoPetkov\HTML5DOMDocument();
-			// $dom->loadHTML($response->getBody());
-			// echo $dom->querySelector('a.button')->getAttribute('href');
-
 			$response = $client->request('POST', 'https://photofunia.com/images?server=1', [
 			    'multipart' => [
 			        [
 			            'name'     => 'image',
-			            'contents' => fopen('./uploads/'.$file->getClientOriginalName(),'r')
+			            'contents' => fopen('./uploads/originalFiles/'.$file->getClientOriginalName(),'r')
+			            // 'contents' => $file
 			        ],
 			    ]
 			]);
@@ -93,7 +86,19 @@ class UploadController extends Controller {
 			echo $sketchURL;
 			
 
-			$queryString = array('sketchURL' => $sketchURL);
+			$queryString 	= array('sketchURL' => $sketchURL);
+			$randomString = trim(Uuid::uuid1()->toString());
+			$sketchFileName = $randomString.'.jpg';
+			$sketchedFilesBackgroundRemoved = $randomString.'.png';
+
+			copy($sketchURL, 'uploads/sketchedFiles/'.$sketchFileName);
+
+			$removeBackgroundCommand = 'convert "./uploads/sketchedFiles/'.$sketchFileName.'" -fill none -draw "color 1,1 floodfill" "./uploads/sketchedFilesBackgroundRemoved/'.$sketchedFilesBackgroundRemoved.'"';
+			$output = '';
+			// Run it
+			$commandOutput = shell_exec($removeBackgroundCommand);
+			// Output
+			$output .= htmlentities(trim($commandOutput)) . "\n";
 
 			return redirect()->route('showMenTshirt', $queryString);
 			// return redirect()->route('showMenTshirt');
