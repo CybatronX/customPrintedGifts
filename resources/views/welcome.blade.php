@@ -100,7 +100,7 @@
             </form>
         </div>
 
-        <a href="#myModal" role="button" class="btn modalButton btn-large btn-primary" data-toggle="modal">Launch Demo Modal</a>
+        <a href="#myModal" role="button" class="btn modalButton btn-large btn-primary" data-toggle="modal">Launch Demo Modal1</a>
 
         <div id="myModal" class="modal fade">
             <div class="modal-dialog">
