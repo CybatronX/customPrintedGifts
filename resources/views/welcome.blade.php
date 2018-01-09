@@ -80,7 +80,7 @@
 
             <p>A Bootstrap/jQuery plugin to preview image uploads.</p>            
 
-            <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data" id="imageUploadForm">
                 <div class="imageupload panel panel-default">
                     <div class="panel-heading clearfix">
                         <h3 class="panel-title pull-left">Upload Image</h3>
@@ -159,20 +159,18 @@
             // });
 
             $(document).ready(function() {
-              $('.progress .progress-bar').css("width",
-                        function() {
-                            return $(this).attr("aria-valuenow") + "%";
-                        }
-                    )
-            });
+                $( "#imageUploadForm" ).submit(function( event ) {
+                  $(".modalButton").off("click");
+                    $(".modalButton").click(function(){
+                        $("#myModal").modal('show');
+                    });
 
-            $(window).load(function(){
-                $(".modalButton").off("click");
-                $(".modalButton").click(function(){
-                    $("#myModal").modal('show');
+                $('.progress .progress-bar').css("width",
+                    function() {
+                        return $(this).attr("aria-valuenow") + "%";
+                    })
                 });
             });
-
         </script>
     </body>
 </html>
