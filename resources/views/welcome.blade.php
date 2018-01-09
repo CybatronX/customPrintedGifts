@@ -102,7 +102,7 @@
             </form>
         </div>
 
-        <a href="#myModal" role="button" class="btn modalButton btn-large btn-primary" data-toggle="modal">Launch Demo Modal1</a>
+<!--         <a href="#myModal" role="button" class="btn modalButton btn-large btn-primary" data-toggle="modal">Launch Demo Modal1</a>
 
         <div id="myModal" class="modal fade">
             <div class="modal-dialog">
@@ -113,7 +113,6 @@
                     </div>
                     <div class="modal-body">
                         <div class="container progressBarContainer">
-                         <!-- Skill Bars -->
                             <div class="progress skill-bar">
                                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
                                 </div>
@@ -126,7 +125,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <div class="container progressBarContainer">
+            <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
+                </div>
+            </div>
+        </div>  
 
 
 
@@ -163,7 +169,6 @@
             $(document).ready(function() {
                 $('.progress .progress-bar').css("width", "0%");
                 $( "#imageUploadForm" ).submit(function( event ) {
-                    $("#myModal").modal('show');
                     $(".progressBarContainer").show();
                     $('.progress .progress-bar').css("width", "95%");
                 });
