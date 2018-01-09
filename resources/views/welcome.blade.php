@@ -47,7 +47,7 @@
             }
 
             .progressBarContainer {
-                display:none;
+                display:block;
                 width:100%;
             }
 
