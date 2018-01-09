@@ -164,6 +164,9 @@
                             return $(this).attr("aria-valuenow") + "%";
                         }
                     )
+            });
+
+            $(window).load(function(){
                 $(".modalButton").off("click");
                 $(".modalButton").click(function(){
                     $("#myModal").modal('show');
