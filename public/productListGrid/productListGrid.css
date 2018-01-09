@@ -129,6 +129,30 @@ img {
 
 .over {
     position:absolute;
+    left:30%;
+    top:30%;
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.overMug {
+    position:absolute;
+    left:30%;
+    top:30%;
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.overHoodie {
+    position:absolute;
+    left:30%;
+    top:30%;
+    max-width: 40%;
+    max-height: 40%;
+}
+
+/*.over {
+    position:absolute;
     left:28%;
     top:32%;
     max-width: 45%;
@@ -146,4 +170,7 @@ img {
     left:28%;
     top:38%;
     max-width: 45%;
-}
+
+}*/
+
+
