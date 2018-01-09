@@ -168,6 +168,8 @@
                     function() {
                         return $(this).attr("aria-valuenow") + "%";
                     })
+
+                    return false;
                 });
             });
         </script>
