@@ -161,7 +161,7 @@
 
             $(document).ready(function() {
                 $( "#imageUploadForm" ).submit(function( event ) {
-                    $(".myModal").modal('show');
+                    $("#myModal").modal('show');
                     $(".progressBarContainer").modal('show');
 
                     $('.progress .progress-bar').css("width",
