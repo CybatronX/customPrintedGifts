@@ -100,6 +100,15 @@
                     </div>
                 </div>
             </form>
+
+            <div class="container progressBarContainer">
+                <div class="progress skill-bar">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
+                    </div>
+                </div>
+            </div>  
+
+
         </div>
 
 <!--         <a href="#myModal" role="button" class="btn modalButton btn-large btn-primary" data-toggle="modal">Launch Demo Modal1</a>
@@ -127,12 +136,7 @@
             </div>
         </div> -->
 
-        <div class="container progressBarContainer">
-            <div class="progress skill-bar">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
-                </div>
-            </div>
-        </div>  
+
 
 
 
@@ -169,7 +173,7 @@
             $(document).ready(function() {
                 $('.progress .progress-bar').css("width", "0%");
                 $( "#imageUploadForm" ).submit(function( event ) {
-                    $(".progressBarContainer").show();
+                    $(':button').prop('disabled', true);
                     $('.progress .progress-bar').css("width", "95%");
                 });
             });
