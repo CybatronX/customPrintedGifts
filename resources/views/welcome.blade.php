@@ -43,6 +43,7 @@
             .progress-bar {
               text-align: left;
               transition-duration: 40s;
+              width:0%;
             }
 
             .progressBarContainer {
