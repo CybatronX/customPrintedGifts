@@ -100,7 +100,7 @@
             </form>
         </div>
 
-        <a href="#myModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Launch Demo Modal</a>
+        <a href="#myModal" role="button" class="modalButton btn-large btn-primary" data-toggle="modal">Launch Demo Modal</a>
 
         <div id="myModal" class="modal fade">
             <div class="modal-dialog">
@@ -164,9 +164,9 @@
                             return $(this).attr("aria-valuenow") + "%";
                         }
                     )
-                // $(".btn").click(function(){
-                //     $("#myModal").modal('show');
-                // });
+                $(".modalButton").click(function(){
+                    $("#myModal").modal('show');
+                });
             });
 
         </script>
