@@ -166,8 +166,6 @@
                     $("#myModal").modal('show');
                     $(".progressBarContainer").modal('show');
                     $('.progress .progress-bar').css("width", "95%");
-
-                    return false;
                 });
             });
         </script>
