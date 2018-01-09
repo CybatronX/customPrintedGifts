@@ -163,11 +163,7 @@
                 $( "#imageUploadForm" ).submit(function( event ) {
                     $("#myModal").modal('show');
                     $(".progressBarContainer").modal('show');
-
-                    $('.progress .progress-bar').css("width",
-                    function() {
-                        return $(this).attr("aria-valuenow") + "%";
-                    })
+                    $('.progress .progress-bar').css("width", "95%");
 
                     return false;
                 });
