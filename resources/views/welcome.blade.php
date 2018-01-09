@@ -47,6 +47,7 @@
 
             .progressBarContainer {
                 display:none;
+                width:100%;
             }
 
         </style>
@@ -160,12 +161,10 @@
 
             $(document).ready(function() {
                 $( "#imageUploadForm" ).submit(function( event ) {
-                  $(".modalButton").off("click");
-                    $(".modalButton").click(function(){
-                        $("#myModal").modal('show');
-                    });
+                    $(".myModal").modal('show');
+                    $(".progressBarContainer").modal('show');
 
-                $('.progress .progress-bar').css("width",
+                    $('.progress .progress-bar').css("width",
                     function() {
                         return $(this).attr("aria-valuenow") + "%";
                     })
