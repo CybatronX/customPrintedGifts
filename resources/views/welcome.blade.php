@@ -98,17 +98,16 @@
                         <input type="submit" class="btn btn-primary" name="submit" value="Upload"> 
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
                     </div>
+
+                    <div class="container progressBarContainer">
+                        <div class="progress skill-bar">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
+                            </div>
+                        </div>
+                    </div>  
+
                 </div>
             </form>
-
-            <div class="container progressBarContainer">
-                <div class="progress skill-bar">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
-                    </div>
-                </div>
-            </div>  
-
-
         </div>
 
 <!--         <a href="#myModal" role="button" class="btn modalButton btn-large btn-primary" data-toggle="modal">Launch Demo Modal1</a>
