@@ -100,14 +100,35 @@
             </form>
         </div>
 
-        <div class="container progressBarContainer">
-            <h2>Test update...</h2>
-         <!-- Skill Bars -->
-            <div class="progress skill-bar">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
+        <a href="#myModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Launch Demo Modal</a>
+
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Uploading and converting image into a Nostalgic sketch...</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container progressBarContainer">
+                         <!-- Skill Bars -->
+                            <div class="progress skill-bar">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
             </div>
-        </div>  
+        </div>
+
+
+
+
 
     </div>
     </div>
@@ -137,13 +158,16 @@
             //     $(this).blur();
             // });
 
-             $(document).ready(function() {
+            $(document).ready(function() {
               $('.progress .progress-bar').css("width",
                         function() {
                             return $(this).attr("aria-valuenow") + "%";
                         }
                     )
+                $(".btn").click(function(){
+                    $("#myModal").modal('show');
                 });
+            });
 
         </script>
     </body>
