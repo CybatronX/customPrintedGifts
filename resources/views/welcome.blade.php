@@ -110,7 +110,7 @@
                         </div>
                     </div>   -->
 
-                    <div class="ldBar" data-value="50"></div>
+                    <div class="ldBar" data-value="0"></div>
 
                 </div>
             </form>
@@ -129,27 +129,15 @@
                 maxFileSizeKb:8192
             });
 
-            // $('#imageupload-disable').on('click', function() {
-            //     $imageupload.imageupload('disable');
-            //     $(this).blur();
-            // })
-
-            // $('#imageupload-enable').on('click', function() {
-            //     $imageupload.imageupload('enable');
-            //     $(this).blur();
-            // })
-
-            // $('#imageupload-reset').on('click', function() {
-            //     $imageupload.imageupload('reset');
-            //     $(this).blur();
-            // });
-
             $(document).ready(function() {
                 // $('.progress .progress-bar').css("width", "0%");
                 // $( "#imageUploadForm" ).submit(function( event ) {
                 //     $(':button').prop('disabled', true);
                 //     $('.progress .progress-bar').css("width", "95%");
                 // });
+
+                var progressBar = $('.ldBar').ldBar;
+                progressBar.set(100);
             });
         </script>
     </body>
