@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="./bootstrap-imageupload/dist/css/bootstrap-imageupload.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./loadingBar/loading-bar.css"/>
         
         <!-- Styles -->
         <style>
@@ -23,7 +24,7 @@
                 margin: 20px 0;
             }
 
-            .progress {
+/*            .progress {
               height: 35px;
 
             }
@@ -52,7 +53,7 @@
             .progressBarContainer {
                 display:block;
                 width:100%;
-            }
+            }*/
 
         </style>
     </head>
@@ -102,54 +103,25 @@
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
                     </div>
 
-                    <div class="container progressBarContainer">
+<!--                     <div class="container progressBarContainer">
                         <div class="progress skill-bar">
                             <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
                             </div>
                         </div>
-                    </div>  
+                    </div>   -->
+
+                    <div class="ldBar" data-value="50"></div>
 
                 </div>
             </form>
         </div>
-
-<!--         <a href="#myModal" role="button" class="btn modalButton btn-large btn-primary" data-toggle="modal">Launch Demo Modal1</a>
-
-        <div id="myModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">  
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Uploading and converting image into a Nostalgic sketch...</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container progressBarContainer">
-                            <div class="progress skill-bar">
-                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-
-
-
-
-
     </div>
     </div>
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="./bootstrap-imageupload/dist/js/bootstrap-imageupload.js"></script>
+        <script type="text/javascript" src="./loadingBar/loading-bar.js"></script>
 
         <script>
             var $imageupload = $('.imageupload');
@@ -173,11 +145,11 @@
             // });
 
             $(document).ready(function() {
-                $('.progress .progress-bar').css("width", "0%");
-                $( "#imageUploadForm" ).submit(function( event ) {
-                    $(':button').prop('disabled', true);
-                    $('.progress .progress-bar').css("width", "95%");
-                });
+                // $('.progress .progress-bar').css("width", "0%");
+                // $( "#imageUploadForm" ).submit(function( event ) {
+                //     $(':button').prop('disabled', true);
+                //     $('.progress .progress-bar').css("width", "95%");
+                // });
             });
         </script>
     </body>
