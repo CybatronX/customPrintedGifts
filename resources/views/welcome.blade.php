@@ -110,7 +110,7 @@
                         </div>
                     </div>   -->
 
-                    <div class="ldBar" data-value="0"></div>
+                    <div id="progressBar" class="ldBar" data-value="0"></div>
 
                 </div>
             </form>
@@ -136,7 +136,7 @@
                 //     $('.progress .progress-bar').css("width", "95%");
                 // });
 
-                var progressBar = $('.ldBar').ldBar;
+                var progressBar = new ldBar("#progressBar");
                 progressBar.set(100);
             });
         </script>
