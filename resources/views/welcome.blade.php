@@ -110,7 +110,7 @@
                         </div>
                     </div>   -->
 
-                    <div id="progressBar" class="ldBar" data-value="0"></div>
+                    <div id="progressBar" data-preset="fan" class="ldBar" data-value="0"></div>
 
                 </div>
             </form>
@@ -139,7 +139,7 @@
                 var progressBar = new ldBar("#progressBar");
                 var i = 0;
                 setInterval(function(){ 
-                        i = i+1;
+                        i = i+3;
                         progressBar.set(i);
                     }, 1000);
                 
