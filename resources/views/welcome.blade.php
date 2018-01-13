@@ -84,7 +84,7 @@
 
         <div class="container">
 
-            <p>A Bootstrap/jQuery plugin to preview image uploads.</p>            
+            <p>Nostalgic Gifts.com!</p>            
 
             <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data" id="imageUploadForm">
                 <div class="imageupload panel panel-default">
