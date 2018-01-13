@@ -137,7 +137,12 @@
                 // });
 
                 var progressBar = new ldBar("#progressBar");
-                progressBar.set(100);
+                var i = 0;
+                setInterval(function(){ 
+                        i = i+1;
+                        progressBar.set(i);
+                    }, 1000);
+                
             });
         </script>
     </body>
