@@ -42,7 +42,10 @@
 
             .progress-bar {
               text-align: left;
-              transition-duration: 40s;
+                -webkit-transition-duration: 40000ms;
+                -moz-transition-duration: 40000ms;
+                -o-transition-duration: 40000ms;
+                 transition-duration: 40000ms;
               width:0%;
             }
 
