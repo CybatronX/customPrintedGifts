@@ -101,19 +101,10 @@
                         <button type="button" class="btn btn-default">Remove</button>
                         <input type="submit" class="btn btn-primary" name="submit" value="Upload"> 
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
-                    </div>
-
-<!--                     <div class="container progressBarContainer">
-                        <div class="progress skill-bar">
-                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" >
-                            </div>
-                        </div>
-                    </div>   -->
-
-                    <!-- Modal -->
-                    <!-- Button trigger modal -->                    
+                    </div>              
                 </div>
             </form>
+             <div id="progressBar" style="width:100%;height:60px" -preset="fan" class="ldBar" data-value="0"></div>
         </div>
                     <button type="button" id="openModal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                       Launch demo modal
@@ -126,9 +117,7 @@
                       </div>
                     </div>
 
-                    <div id="progressBar" style="width:100%;height:60px" -preset="fan" class="ldBar" data-value="0"></div>
-    </div>
-    </div>
+                   
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
