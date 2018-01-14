@@ -111,7 +111,10 @@
                     </div>   -->
 
                     <!-- Modal -->
-                    <!-- Button trigger modal -->
+                    <!-- Button trigger modal -->                    
+                </div>
+            </form>
+        </div>
                     <button type="button" id="openModal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                       Launch demo modal
                     </button>
@@ -120,16 +123,11 @@
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-body">
-                            <div id="progressBar" data-preset="fan" class="ldBar" data-value="0"></div>
+                            <div id="progressBar" sdata-preset="fan" class="ldBar" data-value="0"></div>
                           </div>
                         </div>
                       </div>
                     </div>
-
-                    
-                </div>
-            </form>
-        </div>
     </div>
     </div>
 
