@@ -161,7 +161,7 @@
                 //     $(':button').prop('disabled', true);
                 //     $('.progress .progress-bar').css("width", "95%");
                 // });
-                $('openModal').click(function(){
+                $('#openModal').click(function(){
                     $('#myModal').modal('show');
                 });
                 
