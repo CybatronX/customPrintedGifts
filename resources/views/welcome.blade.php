@@ -126,7 +126,7 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            ...
+                            <div id="progressBar" data-preset="fan" class="ldBar" data-value="0"></div>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -136,8 +136,7 @@
                       </div>
                     </div>
 
-                    <div id="progressBar" data-preset="fan" class="ldBar" data-value="0"></div>
-
+                    
                 </div>
             </form>
         </div>
@@ -163,16 +162,17 @@
                 // });
                 $('#openModal').click(function(){
                     $('#myModal').modal('show');
+                    var progressBar = new ldBar("#progressBar");
+                    var i = 0;
+                    setInterval(function(){ 
+                            i = i+3;
+                            progressBar.set(i);
+                        }, 1000);
+                    
+                    });
                 });
                 
-                var progressBar = new ldBar("#progressBar");
-                var i = 0;
-                setInterval(function(){ 
-                        i = i+3;
-                        progressBar.set(i);
-                    }, 1000);
                 
-                });
         </script>
     </body>
 </html>
