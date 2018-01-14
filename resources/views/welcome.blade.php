@@ -147,9 +147,11 @@
                 //     $(':button').prop('disabled', true);
                 //     $('.progress .progress-bar').css("width", "95%");
                 // });
+                var progressBar = new ldBar("#progressBar");
+                
                 $('#openModal').click(function(){
                     $('#myModal').modal('show');
-                    var progressBar = new ldBar("#progressBar");
+                    
                     var i = 0;
                     setInterval(function(){ 
                             i = i+3;
