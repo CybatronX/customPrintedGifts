@@ -126,7 +126,7 @@
                       </div>
                     </div>
 
-                    <div id="progressBar" sdata-preset="fan" class="ldBar" data-value="0"></div>
+                    <!-- <div id="progressBar" sdata-preset="fan" class="ldBar" data-value="0"></div> -->
     </div>
     </div>
 
