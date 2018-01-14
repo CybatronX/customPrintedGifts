@@ -109,7 +109,7 @@
                       Launch demo modal
                     </button>
 
-                    <div id="progressBar" style="width:100%;height:60px"  class="ldBar" data-value="0"></div>
+                    <div id="progressBar" style="width:100%;height:60px" data-preset="fan" class="ldBar" data-value="0"></div>
 
                   <!--   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
