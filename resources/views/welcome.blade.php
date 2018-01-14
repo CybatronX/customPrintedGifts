@@ -115,7 +115,7 @@
                 </div>
             </form>
         </div>
-                   <!--  <button type="button" id="openModal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" id="openModal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                       Launch demo modal
                     </button>
 
@@ -124,7 +124,7 @@
                         <div class="modal-content">
                         </div>
                       </div>
-                    </div> -->
+                    </div>
 
                     <div id="progressBar" sdata-preset="fan" class="ldBar" data-value="0"></div>
     </div>
