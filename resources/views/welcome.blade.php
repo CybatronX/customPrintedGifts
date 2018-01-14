@@ -126,7 +126,7 @@
                       </div>
                     </div>
 
-                    <div id="progressBar" sdata-preset="fan" class="ldBar" data-value="0"></div>
+                    <div id="progressBar" style="width:100%;height:60px" -preset="fan" class="ldBar" data-value="0"></div>
     </div>
     </div>
 
@@ -148,7 +148,7 @@
                 //     $('.progress .progress-bar').css("width", "95%");
                 // });
                 var progressBar = new ldBar("#progressBar");
-                
+
                 $('#openModal').click(function(){
                     $('#myModal').modal('show');
                     
