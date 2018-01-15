@@ -99,7 +99,7 @@
                             <input type="file" id="image-file" name="image-file">
                         </label>
                         <button type="button" class="btn btn-default">Remove</button>
-                        <input type="submit" class="btn btn-primary" name="submit" value="Upload"> 
+                        <input type="submit" id="submit" class="btn btn-primary" name="submit" value="Upload"> 
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
                     </div>  
                     <div id="progressBar" style="width:100%;height:60px"  class="ldBar label-center" data-value="0"></div>            
@@ -137,7 +137,7 @@
                 // });
                 var progressBar = new ldBar("#progressBar");
 
-                $('#openModal').click(function(){
+                $('#submit').click(function(){
                     // $('#myModal').modal('show');
                     
                     var i = 0;
