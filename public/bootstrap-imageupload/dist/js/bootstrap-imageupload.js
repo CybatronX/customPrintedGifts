@@ -243,6 +243,7 @@ if (typeof jQuery === 'undefined') {
         var $browseFileButton = $fileTab.find('.btn:eq(0)');
         var $removeFileButton = $fileTab.find('.btn:eq(1)');
         var $fileInput = $browseFileButton.find('input[type="file"]');
+        var $imageUploadButton = $("#submit");
         
         $fileTab.find('.alert').remove();
         $fileTab.find('img').remove();
