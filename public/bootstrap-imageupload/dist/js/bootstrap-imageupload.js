@@ -64,6 +64,7 @@ if (typeof jQuery === 'undefined') {
         var $urlTabButton = $imageupload.find('.panel-heading .btn:eq(1)');
         var $submitUrlButton = $urlTab.find('.btn:eq(0)');
         var $removeUrlButton = $urlTab.find('.btn:eq(1)');
+        var $imageUploadButton = $("#submit");
 
         // Do a complete reset.
         resetFileTab($fileTab);
@@ -108,6 +109,9 @@ if (typeof jQuery === 'undefined') {
             $(this).blur();
             resetUrlTab($urlTab);
         });
+
+        // Disable upload button intially
+        $imageUploadButton.prop('disabled', true);
     }
 
     function disable() {

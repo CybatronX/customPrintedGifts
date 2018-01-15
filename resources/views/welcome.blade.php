@@ -81,9 +81,7 @@
             </div>
         </nav>
 
-        <div class="container">
-
-            <p>Nostalgic Gifts.com!</p>            
+        <div class="container">            
 
             <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data" id="imageUploadForm">
                 <div class="imageupload panel panel-default">
