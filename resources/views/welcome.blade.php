@@ -129,7 +129,7 @@
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-                    <img src="./loadingBar/Ripple.gif" class="center-block" width="30%" height="30%">
+                    <img src="./loadingBar/Ripple.gif" class="center-block">
                     <h3 class="text-center"> Creating a pencil sketch of your photo...</h3> 
             </div>
           </div>
