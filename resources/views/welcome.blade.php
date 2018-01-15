@@ -63,6 +63,7 @@
         </style>
     </head>
     <body>
+    change!
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -164,7 +165,6 @@
             });
 
             // bar.animate(1.0);  // Number from 0.0 to 1.0
-            alert("hi");
 
             $(document).ready(function() {
                 // $("#loadingSpinny").hide();
