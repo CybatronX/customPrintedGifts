@@ -103,7 +103,11 @@
                 </div>
             </form>
         </div>
-                    
+
+        <div id="loadingSpinny">
+            <img src="./loadingBar/Ripple.gif" class="center-block" width="30%" height="30%">
+            <h3 class="text-center"> Creating a pencil sketch of your photo...</h3>
+        </div> 
 
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -127,8 +131,11 @@
             });
 
             $(document).ready(function() {
+                $("#loadingSpinny").hide();
+
                 $('#submit').click(function(){
                     $('#myModal').modal('show');
+                    $("#loadingSpinny").show();
                     
                     // var i = 0;
                     // setInterval(function(){ 
