@@ -267,6 +267,7 @@ if (typeof jQuery === 'undefined') {
                     $fileTab.prepend(getImageThumbnailHtml(e.target.result));
                     $browseFileButton.find('span').text('Change');
                     $removeFileButton.css('display', 'inline-block');
+                    $imageUploadButton.prop('disabled', false);
                 };
 
                 fileReader.onerror = function() {
