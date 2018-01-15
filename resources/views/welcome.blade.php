@@ -101,15 +101,12 @@
                         <button type="button" class="btn btn-default">Remove</button>
                         <input type="submit" class="btn btn-primary" name="submit" value="Upload"> 
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
-                    </div>              
+                    </div>  
+                    <div id="progressBar" style="width:100%;height:60px"  class="ldBar label-center" data-value="0"></div>            
                 </div>
             </form>
         </div>
-                    <button type="button" id="openModal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                      Launch demo modal
-                    </button>
-
-                    <div id="progressBar" style="width:100%;height:60px" data-preset="fan" class="ldBar bel-center" data-value="0"></div>
+                    
 
                   <!--   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
