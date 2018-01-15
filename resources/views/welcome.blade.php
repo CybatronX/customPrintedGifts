@@ -41,7 +41,7 @@
             }
 
             #progressBar {
-              top:30%;
+              top:15%;
               left:30%;
               width: 40%;
               height: 40%;
@@ -128,6 +128,7 @@
         </div>
 
         <div id="myModal">
+            <h3 class="text-center"> uploading Image </h3>
             <div id="progressBar"></div>
         </div>
 
@@ -181,7 +182,7 @@
               }
             });
             bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-            bar.text.style.fontSize = '30rem';
+            bar.text.style.fontSize = '15rem';
 
             // bar.animate(1.0);  // Number from 0.0 to 1.0
 
