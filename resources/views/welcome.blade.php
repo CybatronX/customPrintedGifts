@@ -187,9 +187,9 @@
             // bar.animate(1.0);  // Number from 0.0 to 1.0
 
             $(document).ready(function() {
-                // $("#loadingSpinny").hide();
-                bar.animate(1.0);
+                $("#myModal").hide();
                 $('#submit').click(function(){
+                    $("#myModal").show();
                     bar.animate(1.0); 
                     });
                 });
