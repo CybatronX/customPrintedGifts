@@ -164,6 +164,7 @@
             });
 
             // bar.animate(1.0);  // Number from 0.0 to 1.0
+            alert("hi");
 
             $(document).ready(function() {
                 // $("#loadingSpinny").hide();
