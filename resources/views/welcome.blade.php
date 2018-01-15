@@ -29,6 +29,15 @@
               height: 8px;
               position: relative;
             }
+
+            #myModal{
+                width:100%;
+                height:100%;
+                position:absolute;
+                top:0;
+                left:0;
+                z-index: 9999;
+            }
 /*            .progress {
               height: 35px;
 
@@ -63,8 +72,6 @@
         </style>
     </head>
     <body>
-    change2!
-
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -111,7 +118,9 @@
             </form>
         </div>
 
-        <div id="progressBar"></div>
+        <div id="myModal">
+            <div id="progressBar"></div>
+        </div>
 
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -164,11 +173,11 @@
               }
             });
 
-            bar.animate(1.0);  // Number from 0.0 to 1.0
+            // bar.animate(1.0);  // Number from 0.0 to 1.0
 
             $(document).ready(function() {
                 // $("#loadingSpinny").hide();
-
+                bar.animate(1.0);
                 $('#submit').click(function(){
                     bar.animate(1.0); 
                     });
