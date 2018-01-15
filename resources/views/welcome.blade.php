@@ -128,7 +128,7 @@
         </div>
 
         <div id="myModal">
-            <h3 class="text-center"> uploading Image </h3>
+            <h3 class="text-center"> Uploading and converting image into pencil sketch... </h3>
             <div id="progressBar"></div>
         </div>
 
