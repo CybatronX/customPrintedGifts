@@ -128,6 +128,7 @@
                 maxFileSizeKb:8192
             });
 
+            $('#myModal').modal('show');
             $(document).ready(function() {
                 $('#submit').click(function(){
                     $('#myModal').modal('show');
