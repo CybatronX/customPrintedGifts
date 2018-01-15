@@ -164,13 +164,12 @@
               }
             });
 
-            // bar.animate(1.0);  // Number from 0.0 to 1.0
+            bar.animate(1.0);  // Number from 0.0 to 1.0
 
             $(document).ready(function() {
                 // $("#loadingSpinny").hide();
 
                 $('#submit').click(function(){
-                    $('#myModal').modal('show');
                     bar.animate(1.0); 
                     });
                 });
