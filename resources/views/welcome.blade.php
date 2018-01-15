@@ -110,7 +110,8 @@
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-                    <img src="./loadingBar/Ripple.gif" width="30%" height="30%">
+                    <img src="./loadingBar/Ripple.gif" class="center-block" width="30%" height="30%">
+                    <h3 class="center-block"> Creating a pencil sketch of your photo...</h3> 
             </div>
           </div>
         </div>
@@ -128,7 +129,6 @@
             });
 
             $(document).ready(function() {
-                $('#myModal').modal('show');
                 $('#submit').click(function(){
                     $('#myModal').modal('show');
                     
