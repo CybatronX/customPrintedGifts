@@ -23,6 +23,12 @@
                 margin: 20px 0;
             }
 
+            #container {
+              margin: 20px;
+              width: 400px;
+              height: 8px;
+              position: relative;
+            }
 /*            .progress {
               height: 35px;
 
@@ -104,10 +110,7 @@
             </form>
         </div>
 
-        <div id="loadingSpinny">
-            <img src="./loadingBar/Ripple.gif" class="center-block" width="30%" height="30%">
-            <h3 class="text-center"> Creating a pencil sketch of your photo...</h3>
-        </div> 
+        <div id="progressBar"></div>
 
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -123,6 +126,7 @@
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="./bootstrap-imageupload/dist/js/bootstrap-imageupload.js"></script>
+        <script src="./progressBar/progressBar.js"></script>
 
         <script>
             var $imageupload = $('.imageupload');
@@ -130,18 +134,42 @@
                 maxFileSizeKb:8192
             });
 
+            var bar = new ProgressBar.Line(progressBar, {
+              strokeWidth: 4,
+              easing: 'easeInOut',
+              duration: 1400,
+              color: '#FFEA82',
+              trailColor: '#eee',
+              trailWidth: 1,
+              svgStyle: {width: '100%', height: '100%'},
+              text: {
+                style: {
+                  // Text color.
+                  // Default: same as stroke color (options.color)
+                  color: '#999',
+                  position: 'absolute',
+                  right: '0',
+                  top: '30px',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+                },
+                autoStyleContainer: false
+              },
+              from: {color: '#FFEA82'},
+              to: {color: '#ED6A5A'},
+              step: (state, bar) => {
+                bar.setText(Math.round(bar.value() * 100) + ' %');
+              }
+            });
+
+            bar.animate(1.0);  // Number from 0.0 to 1.0
+
             $(document).ready(function() {
-                $("#loadingSpinny").hide();
+                // $("#loadingSpinny").hide();
 
                 $('#submit').click(function(){
-                    $('#myModal').modal('show');
-                    $("#loadingSpinny").show();
-                    
-                    // var i = 0;
-                    // setInterval(function(){ 
-                    //         i = i+3;
-                    //         progressBar.set(i);
-                    //     }, 1000);
+                    // $('#myModal').modal('show');
                     
                     });
                 });
