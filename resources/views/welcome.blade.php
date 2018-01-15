@@ -39,6 +39,13 @@
                 z-index: 9999;
                 background:white;
             }
+
+            #progressBar {
+              margin: 20px;
+              width: 200px;
+              height: 200px;
+              position: relative;
+            }
 /*            .progress {
               height: 35px;
 
@@ -173,7 +180,7 @@
               }
             });
             bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-            bar.text.style.fontSize = '2rem';
+            bar.text.style.fontSize = '30rem';
 
             // bar.animate(1.0);  // Number from 0.0 to 1.0
 
