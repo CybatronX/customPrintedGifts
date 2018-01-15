@@ -145,7 +145,7 @@
                 maxFileSizeKb:8192
             });
 
-            new ProgressBar.Circle(container, {
+            new ProgressBar.Circle(progressBar, {
               color: '#aaa',
               // This has to be the same size as the maximum width to
               // prevent clipping
