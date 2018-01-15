@@ -128,7 +128,7 @@
             });
 
             $(document).ready(function() {
-
+                $('#myModal').modal('show');
                 $('#submit').click(function(){
                     $('#myModal').modal('show');
                     
