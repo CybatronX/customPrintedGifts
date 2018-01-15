@@ -111,7 +111,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
                     <img src="./loadingBar/Ripple.gif" class="center-block" width="30%" height="30%">
-                    <h3 class="center-block"> Creating a pencil sketch of your photo...</h3> 
+                    <h3 class="text-center"> Creating a pencil sketch of your photo...</h3> 
             </div>
           </div>
         </div>
