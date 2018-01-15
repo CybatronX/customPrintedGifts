@@ -11,7 +11,6 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="./bootstrap-imageupload/dist/css/bootstrap-imageupload.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./loadingBar/loading-bar.css"/>
         
         <!-- Styles -->
         <style>
@@ -102,26 +101,25 @@
                         <input type="submit" id="submit" class="btn btn-primary" name="submit" value="Upload"> 
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
                     </div>  
-                    <div id="progressBar" style="width:100%;height:60px"  class="ldBar label-center" data-value="0"></div>            
+                    <!-- <div id="progressBar" style="width:100%;height:60px"  class="ldBar label-center" data-value="0"></div>             -->
                 </div>
             </form>
         </div>
                     
 
-                  <!--   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-
-                        </div>
-                      </div>
-                    </div> -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                    <img src="./loadingBar/Ripple.gif" width="30%" height="30%">
+            </div>
+          </div>
+        </div>
 
                    
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="./bootstrap-imageupload/dist/js/bootstrap-imageupload.js"></script>
-        <script type="text/javascript" src="./loadingBar/loading-bar.js"></script>
 
         <script>
             var $imageupload = $('.imageupload');
@@ -130,23 +128,17 @@
             });
 
             $(document).ready(function() {
-                // $('.progress .progress-bar').css("width", "0%");
-                // $( "#imageUploadForm" ).submit(function( event ) {
-                //     $(':button').prop('disabled', true);
-                //     $('.progress .progress-bar').css("width", "95%");
-                // });
-                var progressBar = new ldBar("#progressBar");
 
                 $('#submit').click(function(){
                     // $('#myModal').modal('show');
                     
-                    var i = 0;
-                    setInterval(function(){ 
-                            i = i+3;
-                            progressBar.set(i);
-                        }, 1000);
+                    // var i = 0;
+                    // setInterval(function(){ 
+                    //         i = i+3;
+                    //         progressBar.set(i);
+                    //     }, 1000);
                     
-                    });
+                    // });
                 });
                 
                 
