@@ -41,9 +41,10 @@
             }
 
             #progressBar {
-              margin: 20px;
-              width: 200px;
-              height: 200px;
+              top:30%;
+              left:30%;
+              width: 40%;
+              height: 40%;
               position: relative;
             }
 /*            .progress {
