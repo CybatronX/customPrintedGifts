@@ -37,6 +37,7 @@
                 top:0;
                 left:0;
                 z-index: 9999;
+                background:white;
             }
 /*            .progress {
               height: 35px;
