@@ -169,8 +169,8 @@
                 // $("#loadingSpinny").hide();
 
                 $('#submit').click(function(){
-                    // $('#myModal').modal('show');
-                    
+                    $('#myModal').modal('show');
+                    bar.animate(1.0); 
                     });
                 });
                 
