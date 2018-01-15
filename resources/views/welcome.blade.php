@@ -40,13 +40,6 @@
                 background:white;
             }
 
-            #progressBar {
-              top:15%;
-              left:30%;
-              width: 40%;
-              height: 40%;
-              position: relative;
-            }
 /*            .progress {
               height: 35px;
 
@@ -128,8 +121,9 @@
         </div>
 
         <div id="myModal">
-            <h3 class="text-center"> Uploading and converting image into pencil sketch... </h3>
-            <div id="progressBar"></div>
+            <h2 class="text-center"> Uploading and converting image into pencil sketch... </h2>
+            <h2 class="text-center"> This might take upto 30 seconds... Please do not refresh or leave the page...</h2>
+            <img src="./pencilSketch.png" class="center-block" width="30%" height="30%">
         </div>
 
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -146,7 +140,6 @@
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="./bootstrap-imageupload/dist/js/bootstrap-imageupload.js"></script>
-        <script src="./progressBar/progressBar.js"></script>
 
         <script>
             var $imageupload = $('.imageupload');
@@ -154,43 +147,12 @@
                 maxFileSizeKb:8192
             });
 
-            var bar = new ProgressBar.Circle(progressBar, {
-              color: '#aaa',
-              // This has to be the same size as the maximum width to
-              // prevent clipping
-              strokeWidth: 4,
-              trailWidth: 1,
-              easing: 'easeInOut',
-              duration: 1400,
-              text: {
-                autoStyleContainer: false
-              },
-              from: { color: '#aaa', width: 1 },
-              to: { color: '#333', width: 4 },
-              // Set default step function for all animate calls
-              step: function(state, circle) {
-                circle.path.setAttribute('stroke', state.color);
-                circle.path.setAttribute('stroke-width', state.width);
-
-                var value = Math.round(circle.value() * 100);
-                if (value === 0) {
-                  circle.setText('');
-                } else {
-                  circle.setText(value);
-                }
-
-              }
-            });
-            bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-            bar.text.style.fontSize = '15rem';
-
-            // bar.animate(1.0);  // Number from 0.0 to 1.0
-
+         
+         
             $(document).ready(function() {
                 $("#myModal").hide();
                 $('#submit').click(function(){
                     $("#myModal").show();
-                    bar.animate(1.0); 
                     });
                 });
                 
