@@ -130,7 +130,7 @@
             $(document).ready(function() {
 
                 $('#submit').click(function(){
-                    // $('#myModal').modal('show');
+                    $('#myModal').modal('show');
                     
                     // var i = 0;
                     // setInterval(function(){ 
