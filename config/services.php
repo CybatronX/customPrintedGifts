@@ -29,10 +29,10 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
-    'stripe' => [
+    'stripeTest' => [
         'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
+        'key' => env('pk_test_bC4fwLOsJOPNerzh2wQz8KGN'),
+        'secret' => env('sk_test_WD6L6ppMCUxBr95NZY3jxvtx'),
     ],
 
 ];
