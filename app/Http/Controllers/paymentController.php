@@ -2,7 +2,7 @@
 
   use Input;
 
-  class paymentController extends Controller {
+  class PaymentController extends Controller {
 
     public function processPayment(){
       // $token  = $_POST['stripeToken'];
