@@ -4,7 +4,7 @@
 
   class paymentController extends Controller {
 
-    public function upload(){
+    public function processPayment(){
       // $token  = $_POST['stripeToken'];
       // $email  = $_POST['stripeEmail'];
 
@@ -19,8 +19,8 @@
       //     'currency' => 'usd'
       // ));
 
-      $stripePublicKey = config('stripeTest.key');
-      echo $stripePublicKey;
+      // $stripePublicKey = config('stripeTest.key');
+      echo "Hello";
     }
   }
 ?>

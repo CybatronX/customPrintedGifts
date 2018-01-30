@@ -23,3 +23,5 @@ Route::post('upload', 'UploadController@upload');
 
 
 Route::get('showMenTshirt', 'UploadController@showProducts')->name('showMenTshirt');
+
+Route::get('payment', 'PaymentController@processPayment');
