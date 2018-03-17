@@ -11,6 +11,17 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="./bootstrap-imageupload/dist/css/bootstrap-imageupload.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./SqPaymentForm/SqPaymentForm.css">
+
+        <!-- link to the SqPaymentForm library -->
+        <script type="text/javascript" src="https://js.squareup.com/v2/paymentform">
+        </script>
+
+        <!-- link to the local SqPaymentForm initialization -->
+        <script type="text/javascript" src="./SqPaymentForm/SqPaymentForm.js">
+        </script>
+
+
         
         <!-- Styles -->
         <style>
@@ -97,7 +108,61 @@
             </div>
         </nav>
 
-        <div class="container">            
+        <div class="container">   
+
+            <div id="sq-ccbox">
+              <!--
+                You should replace the action attribute of the form with the path of
+                the URL you want to POST the nonce to (for example, "/process-card")
+              -->
+              <form id="nonce-form" novalidate action="path/to/payment/processing/page" method="post">
+                Pay with a Credit Card
+                <table>
+                <tbody>
+                  <tr>
+                    <td>Card Number:</td>
+                    <td><div id="sq-card-number"></div></td>
+                  </tr>
+                  <tr>
+                    <td>CVV:</td>
+                    <td><div id="sq-cvv"></div></td>
+                  </tr>
+                  <tr>
+                    <td>Expiration Date: </td>
+                    <td><div id="sq-expiration-date"></div></td>
+                  </tr>
+                  <tr>
+                    <td>Postal Code:</td>
+                    <td><div id="sq-postal-code"></div></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <button id="sq-creditcard" class="button-credit-card" onclick="requestCardNonce(event)">
+                        Pay with card
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+
+                <!--
+                  After a nonce is generated it will be assigned to this hidden input field.
+                -->
+                <input type="hidden" id="card-nonce" name="nonce">
+              </form>
+            </div>
+
+            <div id="sq-walletbox">
+              Pay with a Digital Wallet
+              <div id="sq-apple-pay-label" class="wallet-not-enabled">Apple Pay for Web not enabled</div>
+              <!-- Placeholder for Apple Pay for Web button -->
+              <button id="sq-apple-pay" class="button-apple-pay"></button>
+
+              <div id="sq-masterpass-label" class="wallet-not-enabled">Masterpass not enabled</div>
+              <!-- Placeholder for Masterpass button -->
+              <button id="sq-masterpass" class="button-masterpass"></button>
+            </div>
+
 
             
         </div>
