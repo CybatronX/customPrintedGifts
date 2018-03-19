@@ -134,7 +134,7 @@ var paymentForm = new SqPaymentForm({
       document.getElementById('card-nonce').value = nonce;
 
       // POST the nonce form to the payment processing page
-      document.getElementById('nonce-form').submit();
+      // document.getElementById('nonce-form').submit();
 
     },
 
