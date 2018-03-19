@@ -1,174 +1,124 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Checkout | Square Swag Store</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico in the root directory -->
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="./bootstrap-imageupload/dist/css/bootstrap-imageupload.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./SqPaymentForm/SqPaymentForm.css">
-
-        <!-- link to the SqPaymentForm library -->
-        <script type="text/javascript" src="https://js.squareup.com/v2/paymentform">
-        </script>
-
-        <!-- link to the local SqPaymentForm initialization -->
-        <script type="text/javascript" src="./SqPaymentForm/SqPaymentForm.js">
-        </script>
-
-
-        
-        <!-- Styles -->
-        <style>
-
-            body {
-                padding-top: 70px;
-            }
-
-            .imageupload {
-                margin: 20px 0;
-            }
-
-            #container {
-              margin: 20px;
-              width: 400px;
-              height: 8px;
-              position: relative;
-            }
-
-            #myModal{
-                width:100%;
-                height:100%;
-                position:absolute;
-                top:0;
-                left:0;
-                z-index: 9999;
-                background:white;
-            }
-
-/*            .progress {
-              height: 35px;
-
-            }
-            .progress .skill {
-              font: normal 12px "Open Sans Web";
-              line-height: 35px;
-              padding: 0;
-              margin: 0 0 0 20px;   
-              text-transform: uppercase;
-            }
-            .progress .skill .val {
-              float: right;
-              font-style: normal;
-              margin: 0 20px 0 0;
-            }
-
-            .progress-bar {
-              text-align: left;
-                -webkit-transition-duration: 40000ms;
-                -moz-transition-duration: 40000ms;
-                -o-transition-duration: 40000ms;
-                 transition-duration: 40000ms;
-              width:0%;
-            }
-
-            .progressBarContainer {
-                display:block;
-                width:100%;
-            }*/
-
-        </style>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/sqpaymentform.css">
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div id="cocoon">
+
+            <header class="container">
+                <div class="left">
+                    <a href="./index.php" class="back">Back</a>
+                </div>
+                <div id="square-logo"></div>
+            </header>
+
+
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="">bootstrap-imageupload</a>
+                <h1 class="pageTitle">Review &amp; Complete Your Order</h1>
+
+                <div id="paymentDetails" class="panel">
+                    <h4 class="panelTitle">Payment Details</h4>
+
+                    <div id="sq-ccbox">
+                        <form id="nonce-form" novalidate action="./process-card.php" method="post">
+                            
+                            <!-- 
+                                This needs to get wired up to... the transactions notes?
+                                regardless, we need to record this somewhere. Additionally it would
+                                be great to hook up some error checking / validation for the name and 
+                                email address fields.
+                            -->
+                            <fieldset>
+                                <legend>Your Information</legend>
+                                <input class="sq-input full" type="text" placeholder="Full name" />
+                                <input class="sq-input full" type="text" placeholder="Email address" />
+                            </fieldset>
+
+                            <!-- 
+                                Need to hardcode/hide/remove the ZIP field from this form.
+                            -->
+                            <fieldset>
+                                <legend>Card Details</legend>
+                                <div id="sq-card-number"></div>
+                                <div id="sq-cvv"></div>
+                                <div id="sq-expiration-date"></div>
+                                <div id="sq-postal-code" class="full"></div>
+                            </fieldset>
+                            
+                            <!--
+                                After a nonce is generated it will be assigned to this hidden input field.
+                            -->
+                            <input type="hidden" id="card-nonce" name="nonce">
+                        </form>
+                    </div>
+
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="">Demo</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/egonolieux/bootstrap-imageupload">GitHub</a>
-                        </li>
-                    </ul>
+
+                <div id="orderSummary">
+                    <div class="panel clearfix">
+                        <h4 class="panelTitle">Order Summary</h4>
+
+                        <div class="lineItems">
+                            <div class="lineItem clearfix">
+                                <div class="left">
+                                    <img src="img/products/01.jpg" />
+                                </div>
+                                <div class="left"> <!-- insert quantity and product name here -->
+                                    1 &times; {ProductName}
+                                </div>
+                                <div class="right tabularFigures"> <!-- insert price here -->
+                                    <strong>$1.00</strong>
+                                </div>
+                            </div>
+                        </div> <!-- end line items -->
+
+
+                        <!--
+                            DECISION TIME:
+                            Are we going to hardcode/fake this discount thing (i.e. fake a $0 payment), 
+                            or should we just omit this section and show the payment for what it is ($1.00).
+                        -->
+
+                        <div class="discounts">
+                            <div class="discount clearfix">
+                                <div class="left">Demo Discount</div>
+                                <div class="right tabularFigures negative">($1.00)</div>
+                            </div>
+                        </div> <!-- end discounts -->
+
+                        <div class="orderSummation clearfix">
+                            <div class="left"><strong>Total</strong></div>
+                            <div class="right tabularFigures orderTotal"><strong>$0.00</strong></div> <!-- insert total if not faking -->
+                        </div>
+                    </div>
+                    <button id="sq-creditcard" class="button-credit-card" onclick="requestCardNonce(event)">Pay with Card</button>
                 </div>
             </div>
-        </nav>
 
-        <div class="container">   
-
-            <div id="sq-ccbox">
-              <!--
-                You should replace the action attribute of the form with the path of
-                the URL you want to POST the nonce to (for example, "/process-card")
-              -->
-              <form id="nonce-form" novalidate action="path/to/payment/processing/page" method="post">
-                Pay with a Credit Card
-                <table>
-                <tbody>
-                  <tr>
-                    <td>Card Number:</td>
-                    <td><div id="sq-card-number"></div></td>
-                  </tr>
-                  <tr>
-                    <td>CVV:</td>
-                    <td><div id="sq-cvv"></div></td>
-                  </tr>
-                  <tr>
-                    <td>Expiration Date: </td>
-                    <td><div id="sq-expiration-date"></div></td>
-                  </tr>
-                  <tr>
-                    <td>Postal Code:</td>
-                    <td><div id="sq-postal-code"></div></td>
-                  </tr>
-                  <tr>
-                    <td colspan="2">
-                      <button id="sq-creditcard" class="button-credit-card" onclick="requestCardNonce(event)">
-                        Pay with card
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-                </table>
-
-                <!--
-                  After a nonce is generated it will be assigned to this hidden input field.
-                -->
-                <input type="hidden" id="card-nonce" name="nonce">
-              </form>
-            </div>
-
-            <div id="sq-walletbox">
-              Pay with a Digital Wallet
-              <div id="sq-apple-pay-label" class="wallet-not-enabled">Apple Pay for Web not enabled</div>
-              <!-- Placeholder for Apple Pay for Web button -->
-              <button id="sq-apple-pay" class="button-apple-pay"></button>
-
-              <div id="sq-masterpass-label" class="wallet-not-enabled">Masterpass not enabled</div>
-              <!-- Placeholder for Masterpass button -->
-              <button id="sq-masterpass" class="button-masterpass"></button>
-            </div>
+        </div> <!-- end cocoon -->
 
 
-            
-        </div>
 
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="./bootstrap-imageupload/dist/js/bootstrap-imageupload.js"></script>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- link to the SqPaymentForm library -->
+        <script type="text/javascript" src="https://js.squareup.com/v2/paymentform"></script>
+        <script type="text/javascript" src="js/sqpaymentform.js"></script>
+        
+
     </body>
 </html>
