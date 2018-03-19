@@ -1,102 +1,100 @@
+fieldset legend {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  color: #5C6063;
+}
+
+
+#sq-ccbox {
+  
+}
+
 /* Define how SqPaymentForm iframes should look */
 .sq-input {
-  border: 1px solid rgb(223, 223, 223);
-  outline-offset: -2px;
-  margin-bottom: 5px;
+  font-family: "Helvetica", sans-serif; /* can't use custom fonts! major bummer :'( */
+  font-weight: normal;
+  height: calc(56px - 28px); /* 56 minus 14px top/bottom padding */
   display: inline-block;
+  background-color: #fff;
+  border-radius: 4px;
+  outline: none;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  border: 1px solid #D6D7D8;
+  -webkit-transition: border-color .2s ease-in-out;
+     -moz-transition: border-color .2s ease-in-out;
+      -ms-transition: border-color .2s ease-in-out;
+          transition: border-color .2s ease-in-out;
+  -webkit-font-smoothing: auto !important; /* because we can't force smoothing in the iframe inputs... :'( */
+  -moz-osx-font-smoothing: auto !important; /* because we can't force smoothing in the iframe inputs... :'( */
+}
+
+.sq-input.full {
+  width: calc(100% - 32px); /* minus left/right padding from .sq-input */
+}
+
+/* duplicate code for non-iframe inputs */
+.sq-input:focus {
+  outline: none;
+  border: 1px solid #4A90E2 !important;
 }
 
 /* Define how SqPaymentForm iframes should look when they have focus */
 .sq-input--focus {
-  outline: 5px auto rgb(59, 153, 252);
+  outline: none;
+  border: 1px solid #4A90E2 !important;
 }
 
 /* Define how SqPaymentForm iframes should look when they contain invalid values */
 .sq-input--error {
-  outline: 5px auto rgb(255, 97, 97);
+  outline: none;
+  border: 1px solid #E02F2F;
 }
+
+
+/* card field lockup */
+#sq-card-number {
+  width: calc(264px - 32px); /* minus left/right padding from .sq-input */
+  margin-right: 4px;
+}
+
+#sq-cvv {
+  width: calc(72px - 32px); /* minus left/right padding from .sq-input */
+  margin-right: 4px;
+}
+
+#sq-expiration-date {
+  width: calc(96px - 32px); /* minus left/right padding from .sq-input */
+}
+
 
 /* Customize the "Pay with Credit Card" button */
 .button-credit-card {
-  min-width: 200px;
-  min-height: 20px;
-  padding: 0;
-  margin: 5px;
-  line-height: 20px;
-  box-shadow: 2px 2px 1px rgb(200, 200, 200);
-  background: rgb(255, 255, 255);
-  border-radius: 5px;
-  border: 1px solid rgb(200, 200, 200);
-  font-weight: bold;
-  cursor:pointer;
-}
-
-
-/* Customize the "{{Wallet}} not enabled" message */
-.wallet-not-enabled {
-  min-width: 200px;
-  min-height: 40px;
-  max-height: 64px;
-  padding: 0;
-  margin: 10px;
-  line-height: 40px;
-  background: #eee;
-  border-radius: 5px;
-  font-weight: lighter;
-  font-style: italic;
-  font-family: inherit;
   display: block;
-}
-
-/* Customize the Apple Pay on the Web button */
-.button-apple-pay {
-  min-width: 200px;
-  min-height: 40px;
-  max-height: 64px;
-  padding: 0;
-  margin: 10px;
-  background-image: -webkit-named-image(apple-pay-logo-white);
-  background-color: black;
-  background-size: 100% 60%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  border-radius: 5px;
-  cursor:pointer;
-  display: none;
-}
-
-/* Customize the Masterpass button */
-.button-masterpass {
-  min-width: 200px;
-  min-height: 40px;
-  max-height: 40px;
-  padding: 0;
-  margin: 10px;
-  background-image: url(https://static.masterpass.com/dyn/img/btn/global/mp_chk_btn_147x034px.svg);
-  background-color: black;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  border-radius: 5px;
-  border-color: rgb(255, 255, 255);
-  cursor:pointer;
-  display: none;
-}
-
-#sq-walletbox {
-  float:left;
-  margin:5px;
-  padding:10px;
+  height: 56px;
   text-align: center;
-  vertical-align: top;
-  font-weight: bold;
+  padding: 14px 0 14px 0;
+  width: 100%;
+  font-family: SQMarket-Medium, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #fff;
+  background-color: #0EA50E;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
 }
 
-#sq-ccbox {
-  float:left;
-  margin:5px;
-  padding:10px;
-  text-align: center;
-  vertical-align: top;
-  font-weight: bold;
+.button-credit-card:hover {
+  background-color: #0B8C0B;
 }
+
+.button-credit-card:focus {
+  box-shadow: 0 0 5px 0 #0EA50E;
+}
+
