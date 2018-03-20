@@ -97,7 +97,35 @@ var paymentForm = new SqPaymentForm({
     createPaymentRequest: function () {
 
       var paymentRequestJson ;
-      /* ADD CODE TO SET/CREATE paymentRequestJson */
+      
+        requestShippingAddress: true,
+        requestBillingInfo: true,
+        currencyCode: "USD",
+        countryCode: "US",
+        total: {
+          label: "External Takeover Test",
+          amount: "4.00",
+          pending: false
+        },
+        lineItems: [
+          {
+            label: "Item-1",
+            amount: "1.00",
+            pending: false
+          },
+          {
+            label: "Item-2",
+            amount: "1.00",
+            pending: true
+          },
+          {
+            label: "Item-3",
+            amount: "2.00",
+            pending: false
+          }
+        ]
+      }
+      
       return paymentRequestJson ;
     },
 
