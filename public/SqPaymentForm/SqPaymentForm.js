@@ -80,14 +80,14 @@ var paymentForm = new SqPaymentForm({
       // Otherwise, display the wallet not enabled message.
       if (methods.applePay === true) {
         applePayBtn.style.display = 'inline-block';
-        applePayLabel.style.display = 'none' ;
+        // applePayLabel.style.display = 'none' ;
       }
       // Only show the button if Masterpass is enabled
       // Otherwise, display the wallet not enabled message.
-      if (methods.masterpass === true) {
-        masterpassBtn.style.display = 'inline-block';
-        masterpassLabel.style.display = 'none';
-      }
+      // if (methods.masterpass === true) {
+      //   masterpassBtn.style.display = 'inline-block';
+      //   masterpassLabel.style.display = 'none';
+      // }
     },
 
     /*

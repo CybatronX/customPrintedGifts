@@ -159,9 +159,6 @@
               <!-- Placeholder for Apple Pay for Web button -->
               <button id="sq-apple-pay" class="button-apple-pay"></button>
 
-              <div id="sq-masterpass-label" class="wallet-not-enabled">Masterpass not enabled</div>
-              <!-- Placeholder for Masterpass button -->
-              <button id="sq-masterpass" class="button-masterpass"></button>
             </div>
 
 
