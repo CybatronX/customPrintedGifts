@@ -96,8 +96,7 @@ var paymentForm = new SqPaymentForm({
      */
     createPaymentRequest: function () {
 
-      var paymentRequestJson ;
-      
+      var paymentRequestJson ={
         requestShippingAddress: true,
         requestBillingInfo: true,
         currencyCode: "USD",
@@ -125,7 +124,7 @@ var paymentForm = new SqPaymentForm({
           }
         ]
       }
-      
+
       return paymentRequestJson ;
     },
 
