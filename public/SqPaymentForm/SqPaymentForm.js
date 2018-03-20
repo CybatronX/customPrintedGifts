@@ -99,17 +99,19 @@ var paymentForm = new SqPaymentForm({
       var paymentRequestJson ={
         requestShippingAddress: false,
         requestBillingInfo: false,
-        shippingContact: {
-          familyName: "CUSTOMER LAST NAME",
-          givenName: "CUSTOMER FIRST NAME",
-          email: "mycustomer@example.com",
-          country: "USA",
-          region: "CA",
-          city: "San Francisco",
-          addressLines: [
-            "1455 Market St #600"
-          ],
-          postalCode: "94103"
+        data:{
+            shippingContact: {
+            familyName: "CUSTOMER LAST NAME",
+            givenName: "CUSTOMER FIRST NAME",
+            email: "mycustomer@example.com",
+            country: "USA",
+            region: "CA",
+            city: "San Francisco",
+            addressLines: [
+              "1455 Market St #600"
+            ],
+            postalCode: "94103"
+          }
         }
         currencyCode: "USD",
         countryCode: "US",
