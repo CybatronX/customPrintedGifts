@@ -156,7 +156,6 @@
 
             <div id="sq-walletbox">
               Pay with a Digital Wallet
-              <div id="sq-apple-pay-label" class="wallet-not-enabled">Apple Pay for Web not enabled</div>
               <!-- Placeholder for Apple Pay for Web button -->
               <button id="sq-apple-pay" class="button-apple-pay"></button>
 
