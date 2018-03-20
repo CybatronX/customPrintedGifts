@@ -155,7 +155,7 @@
             </div>
 
             <div id="sq-walletbox">
-              Pay with a Digital Wallet
+              Pay with a Digital Wallet1
               <!-- Placeholder for Apple Pay for Web button -->
               <button id="sq-apple-pay" class="button-apple-pay"></button>
 
