@@ -20,6 +20,11 @@ function requestCardNonce(event) {
 
   // Request a nonce from the SqPaymentForm object
   paymentForm.requestCardNonce();
+
+  paymentForm.setPostalCode("12345");
+  paymentForm.setPostalCode("98052");
+
+  paymentForm.requestCardNonce();
 }
 
 // Create and initialize a payment form object
