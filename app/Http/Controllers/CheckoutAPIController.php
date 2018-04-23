@@ -26,18 +26,6 @@ class CheckoutAPIController extends Controller
                 "amount" => 59000,
                 "currency" => "USD"
               ),
-              "discounts" => array(
-                "name" => "im a nice seller discounts!",
-                "amount_money" = array(
-                  "amount" => 1000,
-                  "currency":"USD"
-                )
-              ),
-              "taxes" => array(
-                "name" => "German export tax",
-                "percentage" => "10",
-                "type" => "ADDITIVE"
-              )
             ),
             array(
               "name" => "Lamy Steel Nib - Black, Broad",
@@ -46,13 +34,6 @@ class CheckoutAPIController extends Controller
                 "amount" => 1300,
                 "currency" => "USD"
               ),
-              "discounts" => array(
-                "name" => "im a nice seller discounts 2!",
-                "amount_money" => array(
-                  "amount" => 1000,
-                  "currency" => "USD"
-                )
-              )
             ),
           )
         ),
