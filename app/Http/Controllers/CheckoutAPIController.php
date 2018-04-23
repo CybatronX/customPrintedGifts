@@ -12,7 +12,6 @@ class CheckoutAPIController extends Controller
 
 
       $orderArray = array(
-        "redirect_url" => "https://mysite.com/confirm-order.php",
         "idempotency_key" => trim(Uuid::uuid1()->toString()),
         "ask_for_shipping_address" => true,
         "merchant_support_email" => "support@mysite.com",
@@ -31,7 +30,7 @@ class CheckoutAPIController extends Controller
             ),
             array(
               "name" => "Lamy Steel Nib - Black, Broad",
-              "quantity" => "2",
+              "quantity" => "1",
               "base_price_money" => array(
                 "amount" => 200,
                 "currency" => "USD"
