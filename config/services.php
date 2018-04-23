@@ -35,9 +35,11 @@ return [
         'secret' => env('sk_test_WD6L6ppMCUxBr95NZY3jxvtx'),
     ],
 
-    'Square' => [
+    'square' => [
         'appId' => env('sq0idp-KwOHqv6HnFDFL7RZTStjDQ'),
         'secret' => env('sq0atp-_iMBe9GqZTMOsjGu_Nbn5w'),
-    ]
+    ],
+
+    'test' => 'myTest'
 
 ];
