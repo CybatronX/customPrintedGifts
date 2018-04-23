@@ -23,8 +23,8 @@ class CheckoutAPIController extends Controller
 
       // $stripePublicKey = config('stripeTest.key');
       echo "...Start....";
-      echo config('services.square.appId');
-      echo config('services.square.secret');
+      echo config('services.squareAppId');
+      echo config('services.squareSecret');
       echo "...End..."; 
       echo config('services.test');
 
