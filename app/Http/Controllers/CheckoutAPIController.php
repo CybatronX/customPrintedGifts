@@ -7,6 +7,7 @@ use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
 
 class CheckoutAPIController extends Controller
+{
     public function processPayment(){
 
 
