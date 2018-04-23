@@ -22,7 +22,9 @@ class CheckoutAPIController extends Controller
       // ));
 
       // $stripePublicKey = config('stripeTest.key');
+      echo "...Start...."
       echo config('Square.appId');
       echo config('Square.secret');
+      echo "...End..."
     }
 }

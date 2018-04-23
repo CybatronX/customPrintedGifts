@@ -38,6 +38,6 @@ return [
     'Square' => [
         'appId' => env('sq0idp-KwOHqv6HnFDFL7RZTStjDQ'),
         'secret' => env('sq0atp-_iMBe9GqZTMOsjGu_Nbn5w'),
-    ],
+    ]
 
 ];
