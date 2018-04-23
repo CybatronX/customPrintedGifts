@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
 
 class CheckoutAPIController extends Controller
 {
@@ -11,7 +13,7 @@ class CheckoutAPIController extends Controller
 
       $orderArray = array(
         "redirect_url" => "https://mysite.com/confirm-order.php",
-        "idempotency_key" => Uuid::generate()->string,
+        "idempotency_key" => trim(Uuid::uuid1()->toString()),
         "ask_for_shipping_address" => true,
         "merchant_support_email" => "support@mysite.com",
         "order" => array(
