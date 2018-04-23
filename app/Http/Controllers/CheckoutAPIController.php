@@ -26,5 +26,6 @@ class CheckoutAPIController extends Controller
       echo config('services.square.appId');
       echo config('services.square.secret');
       echo "...End..."; 
+      echo config('app.log_level');
     }
 }
