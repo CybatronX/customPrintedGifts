@@ -21,6 +21,8 @@ Route::get('test1', function () {
 
 Route::post('upload', 'UploadController@upload');
 
+Route::get('checkoutapi', 'CheckoutAPIController@processPayment');
+
 
 Route::get('showMenTshirt', 'UploadController@showProducts')->name('showMenTshirt');
 
