@@ -25,7 +25,7 @@ class CheckoutAPIController extends Controller
               "name" => "Lamy 2000 Fountain Pen - Black Amber, Fine (Limited Edition)",
               "quantity" => "1",
               "base_price_money" => array(
-                "amount" => 59000,
+                "amount" => 100,
                 "currency" => "USD"
               ),
             ),
@@ -33,7 +33,7 @@ class CheckoutAPIController extends Controller
               "name" => "Lamy Steel Nib - Black, Broad",
               "quantity" => "2",
               "base_price_money" => array(
-                "amount" => 1300,
+                "amount" => 200,
                 "currency" => "USD"
               ),
             ),
