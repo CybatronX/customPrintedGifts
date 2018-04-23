@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'stringEncode' => array($vendorDir . '/paquettg/string-encode/src'),
+    'Webpatser\\Uuid' => array($vendorDir . '/webpatser/laravel-uuid/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'PHPHtmlParser' => array($vendorDir . '/paquettg/php-html-parser/src'),
