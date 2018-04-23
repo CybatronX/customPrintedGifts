@@ -7,7 +7,6 @@ use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
 
 class CheckoutAPIController extends Controller
-{
     public function processPayment(){
 
 
@@ -42,14 +41,15 @@ class CheckoutAPIController extends Controller
       );
 
 
-      // CONFIG FUNCTION: Create a Square Checkout API client if needed
-      initApiClient();
+      //Create the access token
+      $configuration = new \SquareConnect\Configuration();
+      \SquareConnect\Configuration::getDefaultConfiguration()->setAccessToken('sq0atp-_iMBe9GqZTMOsjGu_Nbn5w');
       // Create a new API object to send order information to Square Checkout
       $checkoutClient = new \SquareConnect\Api\CheckoutApi();
       try {
         // Send the order array to Square Checkout
         $apiResponse = $checkoutClient->createCheckout(
-          $GLOBALS['LOCATION_ID'],
+          '4G6PEANTEK6WM',
           $orderArray
         );
         // Grab the redirect url and checkout ID sent back
