@@ -35,7 +35,7 @@ return [
         'secret' => env('sk_test_WD6L6ppMCUxBr95NZY3jxvtx'),
     ],
     
-    'SquareAppId' => env('sq0idp-KwOHqv6HnFDFL7RZTStjDQ'),
-    'SquareSecret' => env('sq0atp-_iMBe9GqZTMOsjGu_Nbn5w'),
-    'test' => env('myTest123')
+    'SquareAppId' => 'sq0idp-KwOHqv6HnFDFL7RZTStjDQ',
+    'SquareSecret' => 'sq0atp-_iMBe9GqZTMOsjGu_Nbn5w',
+    'test' => 'myTest123'
 ];
