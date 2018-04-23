@@ -37,5 +37,5 @@ return [
     
     'SquareAppId' => env('sq0idp-KwOHqv6HnFDFL7RZTStjDQ'),
     'SquareSecret' => env('sq0atp-_iMBe9GqZTMOsjGu_Nbn5w'),
-    'test' => enc('myTest123')
+    'test' => env('myTest123')
 ];
