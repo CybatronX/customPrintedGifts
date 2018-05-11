@@ -29,10 +29,10 @@ Route::get('showMenTshirt', 'UploadController@showProducts')->name('showMenTshir
 // Route::get('payment', 'PaymentController@processPayment');
 
 
-Route::get('payment', function () {
-    return view('payment');
+Route::get('squarePayment', function () {
+    return view('squarePayment');
 });
 
-Route::get('stripe', function () {
-    return view('stripePayment');
+Route::get('stripePayment', function () {
+    return view('stripePayment');		
 });
