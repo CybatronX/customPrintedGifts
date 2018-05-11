@@ -32,3 +32,7 @@ Route::get('showMenTshirt', 'UploadController@showProducts')->name('showMenTshir
 Route::get('payment', function () {
     return view('payment');
 });
+
+Route::get('stripe', function () {
+    return view('stripePayment');
+});

@@ -37,5 +37,6 @@ return [
     
     'squareAppId' => 'sq0idp-KwOHqv6HnFDFL7RZTStjDQ',
     'squareSecret' => 'sq0atp-_iMBe9GqZTMOsjGu_Nbn5w',
+    'squareLocation' => '4G6PEANTEK6WM',
     'test' => 'myTest123'
 ];
