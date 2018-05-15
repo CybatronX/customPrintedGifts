@@ -99,19 +99,7 @@ var paymentForm = new SqPaymentForm({
 
       var paymentRequestJson = {
             requestShippingAddress: false,
-            requestBillingInfo: true,
-            shippingContact: {
-              familyName: "Ajay",
-              givenName: "Anandan",
-              email: "ajaydarez@gmail.com",
-              country: "USA",
-              region: "CA",
-              city: "San Francisco",
-              addressLines: [
-                "1455 Market St #600"
-              ],
-              postalCode: "94103"
-            }
+            requestBillingInfo: true, 
             currencyCode: "USD",
             countryCode: "US",
             total: {
