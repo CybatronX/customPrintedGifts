@@ -20,6 +20,7 @@ function requestCardNonce(event) {
 
   // Request a nonce from the SqPaymentForm object
   paymentForm.requestCardNonce();
+  paymentForm.requestCardNonce();
 }
 
 // Create and initialize a payment form object
