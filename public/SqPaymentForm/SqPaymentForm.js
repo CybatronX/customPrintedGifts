@@ -97,7 +97,41 @@ var paymentForm = new SqPaymentForm({
      */
     createPaymentRequest: function () {
 
-      var paymentRequestJson ;
+      var paymentRequestJson = {
+            requestShippingAddress: false,
+            requestBillingInfo: true,
+            shippingContact: {
+              familyName: "Ajay",
+              givenName: "Anandan",
+              email: "ajaydarez@gmail.com",
+              country: "USA",
+              region: "CA",
+              city: "San Francisco",
+              addressLines: [
+                "1455 Market St #600"
+              ],
+              postalCode: "94103"
+            }
+            currencyCode: "USD",
+            countryCode: "US",
+            total: {
+              label: "Varshini Store",
+              amount: "100",
+              pending: false
+            },
+            lineItems: [
+              {
+                label: "Item1",
+                amount: "50",
+                pending: false
+              },
+              {
+                label: "Item2",
+                amount: "50",
+                pending: false
+              },
+            ]
+          };
       /* ADD CODE TO SET/CREATE paymentRequestJson */
       return paymentRequestJson ;
     },
